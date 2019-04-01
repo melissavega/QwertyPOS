@@ -29,8 +29,8 @@
                      <label>Password</label>
                      <input type="password" class="form-control" placeholder="Password">
                   </div>
-                  <button type="submit" class="btn btn-black">Login</button>
-                  <button type="submit" class="btn btn-secondary">Register</button>
+                  <asp:Button ID="btnLogin" runat="server" Class="btn btn-black" Text ="Login"/>
+                  <asp:Button ID="btnRegister" runat="server" Class="btn btn-black" Text ="Register" PostBackUrl="~/Register.aspx"/>
                </form>
             </div>
          </div>
