@@ -71,6 +71,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CSS\Login.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
