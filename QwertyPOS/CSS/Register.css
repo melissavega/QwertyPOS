@@ -8,7 +8,7 @@
     position: absolute;
     
     top:0;
-    bottom:150px;
+    bottom:190px;
     right:0;
     left:0;
 
@@ -19,6 +19,6 @@
     margin-top:20px;
 }
 
-.valdlbl {
-    margin-bottom: 100px;
+.valad {
+    margin-bottom: 50px;
 }

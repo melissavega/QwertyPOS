@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="CSS/Register.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Register.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <title></title>
 </head>
@@ -13,7 +13,7 @@
         <div class="center-page">
 
 
-            <div class="valdlbl">
+            <div class="vald">
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>
             </div>
             
