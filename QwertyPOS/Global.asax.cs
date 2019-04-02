@@ -8,11 +8,11 @@ using System.Web.UI;
 
 namespace QwertyPOS
 {
-    public class Global : System.Web.HttpApplication
-    {
+	public class Global : System.Web.HttpApplication
+	{
 
-        protected void Application_Start(object sender, EventArgs e)
-        {
+		protected void Application_Start(object sender, EventArgs e) 		
+		{
             string JQueryVer = "1.7.1";
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
             {
@@ -20,38 +20,38 @@ namespace QwertyPOS
                 DebugPath = "~/Scripts/jquery-" + JQueryVer + ".js",
                 CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-" + JQueryVer + ".min.js",
                 CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-" + JQueryVer + ".js",
-                
+               
             });
         }
+		
+		protected void Session_Start(object sender, EventArgs e) 
+		{
 
-        protected void Session_Start(object sender, EventArgs e)
-        {
+		}
 
-        }
+		protected void Application_BeginRequest(object sender, EventArgs e) 
+		{
 
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
+		}
 
-        }
+		protected void Application_AuthenticateRequest(object sender, EventArgs e) 
+		{
 
-        protected void Application_AuthenticateRequest(object sender, EventArgs e)
-        {
+		}
 
-        }
+		protected void Application_Error(object sender, EventArgs e) 
+		{
 
-        protected void Application_Error(object sender, EventArgs e)
-        {
+		}
 
-        }
+		protected void Session_End(object sender, EventArgs e) 
+		{
 
-        protected void Session_End(object sender, EventArgs e)
-        {
+		}
 
-        }
+		protected void Application_End(object sender, EventArgs e) 
+		{
 
-        protected void Application_End(object sender, EventArgs e)
-        {
-
-        }
-    }
+		}
+	}
 }

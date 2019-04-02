@@ -75,6 +75,7 @@
     <Content Include="CSS\Register.css" />
     <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\24-hours.png" />
     <Content Include="Images\barcode.png" />
     <Content Include="Images\buy.png" />
@@ -179,6 +180,9 @@
     </Compile>
     <Compile Include="Employee.aspx.designer.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
