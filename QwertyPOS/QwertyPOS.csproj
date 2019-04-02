@@ -77,7 +77,6 @@
     <Content Include="Employee.aspx" />
     <Content Include="Images\QwertyShopLogo_DarkBack.png" />
     <Content Include="Images\QwertyShopLogo_WhiteBack.png" />
-    <Content Include="JS\Employee.js" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />

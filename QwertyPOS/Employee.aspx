@@ -31,16 +31,9 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Brands
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">ASICS</a>
-                            <a class="dropdown-item" href="#">Adidas</a>
-                            <a class="dropdown-item" href="#">Converse</a>
-                            <a class="dropdown-item" href="#">Fila</a>
-                            <a class="dropdown-item" href="#">New Balance</a>
-                            <a class="dropdown-item" href="#">Nike</a>
-                            <a class="dropdown-item" href="#">Puma</a>
-                            <a class="dropdown-item" href="#">Reebok</a>
-                            <a class="dropdown-item" href="#">Saucony</a>
-                            <a class="dropdown-item" href="#">Vans</a>
+                            <a class="dropdown-item" href="#">Style 1</a>
+                            <a class="dropdown-item" href="#">Stlye 2</a>
+                            <a class="dropdown-item" href="#">Style 3</a>
                         </div>
                     </li>
                 </ul>
@@ -50,17 +43,91 @@
                 <h3>Transaction</h3>
                 <p>Select a brand from the drop down to begin a new transaction.</p>
             </div>
+            <!-- Grouped Dropdown -->
             <div class="container">
-                <!-- List of Items -->
-                <ul class="list-group">
-                    <li class="list-group-item">Brand</li>
-                    <li class="list-group-item">Style</li>
-                    <li class="list-group-item">Gender</li>
-                    <li class="list-group-item">Size</li>
-                    <li class="list-group-item">Price</li>
-                </ul>
-            </div>
-        </div>
+                <h2>Nesting Button Groups</h2>
+                <p>Nest button groups to create dropdown menus:</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">ASICS</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Style 1</a>
+                        <a class="dropdown-item" href="#">Stlye 2</a>
+                        <a class="dropdown-item" href="#">Style 3</a>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Adidas</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Style 1</a>
+                            <a class="dropdown-item" href="#">Stlye 2</a>
+                            <a class="dropdown-item" href="#">Style 3</a>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Converse</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Style 1</a>
+                                <a class="dropdown-item" href="#">Stlye 2</a>
+                                <a class="dropdown-item" href="#">Style 3</a>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Fila</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Style 1</a>
+                                    <a class="dropdown-item" href="#">Stlye 2</a>
+                                    <a class="dropdown-item" href="#">Style 3</a>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Nike</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Style 1</a>
+                                        <a class="dropdown-item" href="#">Stlye 2</a>
+                                        <a class="dropdown-item" href="#">Style 3</a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Puma</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Style 1</a>
+                                            <a class="dropdown-item" href="#">Stlye 2</a>
+                                            <a class="dropdown-item" href="#">Style 3</a>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Reebok</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Style 1</a>
+                                                <a class="dropdown-item" href="#">Stlye 2</a>
+                                                <a class="dropdown-item" href="#">Style 3</a>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                    Sony
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">ASICS</a>
+                                                    <a class="dropdown-item" href="#">Adidas</a>
+                                                    <a class="dropdown-item" href="#">Converse</a>
+                                                    <a class="dropdown-item" href="#">Fila</a>
+                                                    <a class="dropdown-item" href="#">New Balance</a>
+                                                    <a class="dropdown-item" href="#">Nike</a>
+                                                    <a class="dropdown-item" href="#">Puma</a>
+                                                    <a class="dropdown-item" href="#">Reebok</a>
+                                                    <a class="dropdown-item" href="#">Saucony</a>
+                                                    <a class="dropdown-item" href="#">Vans</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <!-- List of Items -->
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Brand</li>
+                                            <li class="list-group-item">Style</li>
+                                            <li class="list-group-item">Gender</li>
+                                            <li class="list-group-item">Size</li>
+                                            <li class="list-group-item">Price</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

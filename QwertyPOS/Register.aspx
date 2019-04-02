@@ -31,12 +31,12 @@
                 <asp:TextBox ID ="tbPhoneNum" runat="server" class="form-control"></asp:TextBox>
             </div>
 
-             <label class="col-xs-11">Passowrd</label>
+             <label class="col-xs-11">Password</label>
             <div class="col-xs-11">
                 <asp:TextBox ID ="tbPassword" runat="server" class="form-control"></asp:TextBox>
             </div>
 
-             <label class="col-xs-11">Confirm Passowrd</label>
+             <label class="col-xs-11">Confirm Password</label>
             <div class="col-xs-11">
                 <asp:TextBox ID ="tbConfirmPass" runat="server" class="form-control"></asp:TextBox>
             </div>
