@@ -4,9 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <title>Employee | Qwerty</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,10 +24,13 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">New Transaction</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Logout</a>
                     </li>
 
-                    <!-- Dropdown -->
+                    <!-- Dropdown
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Brands
                         </a>
@@ -35,10 +39,10 @@
                             <a class="dropdown-item" href="#">Stlye 2</a>
                             <a class="dropdown-item" href="#">Style 3</a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
-            <br>
+         
             <div class="container">
                 <h3>Transaction</h3>
                 <p>Select a brand from the drop down to begin a new transaction.</p>
@@ -54,12 +58,14 @@
                         <a class="dropdown-item" href="#">Stlye 2</a>
                         <a class="dropdown-item" href="#">Style 3</a>
                     </div>
+                    </div>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Adidas</button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Style 1</a>
                             <a class="dropdown-item" href="#">Stlye 2</a>
                             <a class="dropdown-item" href="#">Style 3</a>
+                        </div>
                         </div>
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Converse</button>
@@ -68,12 +74,14 @@
                                 <a class="dropdown-item" href="#">Stlye 2</a>
                                 <a class="dropdown-item" href="#">Style 3</a>
                             </div>
+                            </div>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Fila</button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">Style 1</a>
                                     <a class="dropdown-item" href="#">Stlye 2</a>
                                     <a class="dropdown-item" href="#">Style 3</a>
+                                </div>
                                 </div>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Nike</button>
@@ -82,6 +90,7 @@
                                         <a class="dropdown-item" href="#">Stlye 2</a>
                                         <a class="dropdown-item" href="#">Style 3</a>
                                     </div>
+                                    </div>
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Puma</button>
                                         <div class="dropdown-menu">
@@ -89,12 +98,14 @@
                                             <a class="dropdown-item" href="#">Stlye 2</a>
                                             <a class="dropdown-item" href="#">Style 3</a>
                                         </div>
+                                        </div>
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Reebok</button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">Style 1</a>
                                                 <a class="dropdown-item" href="#">Stlye 2</a>
                                                 <a class="dropdown-item" href="#">Style 3</a>
+                                            </div>
                                             </div>
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -125,9 +136,6 @@
                                             <li class="list-group-item">Price</li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

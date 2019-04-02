@@ -13,7 +13,7 @@
     <div>
     <div class="sidenav">
          <div class="login-main-text">
-            <img alt="Qwerty Logo" src="Images/QwertyShopLogo_DarkBack.png" />        
+            <img alt="Qwerty Logo" src="Images/QwertyKicksYellow.png" />        
             <p>Login or register from here to access.</p>
          </div>
       </div>

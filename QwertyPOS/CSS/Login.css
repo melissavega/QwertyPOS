@@ -6,12 +6,12 @@
 
 .main-head {
     height: 150px;
-    background: #FFF;
+    background: #292b2c;
 }
 
 .sidenav {
     height: 100%;
-    background-color: #000;
+    background-color: #292b2c;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -72,6 +72,6 @@
     }
 
 .btn-black {
-    background-color: #000 !important;
+    background-color: #292b2c !important;
     color: #fff;
 }
