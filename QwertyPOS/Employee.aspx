@@ -27,7 +27,9 @@
                         <a class="nav-link" href="#">New Transaction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                       
+                        <asp:Button ID="btnSignout" runat="server" Text="SignOut" OnClick="btnSignout_Click" CssClass="btn btn-light" />
+
                     </li>
 
                     <!-- Dropdown
@@ -42,7 +44,7 @@
                     </li> -->
                 </ul>
             </nav>
-         
+          <asp:Label ID="lblSuccess" runat="server" Text="Label" CssClass="text-success"></asp:Label>
             <div class="container">
                 <h3>Transaction</h3>
                 <p>Select a brand from the drop down to begin a new transaction.</p>
@@ -136,6 +138,7 @@
                                             <li class="list-group-item">Price</li>
                                         </ul>
                                     </div>
+       
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
