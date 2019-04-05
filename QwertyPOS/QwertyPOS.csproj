@@ -73,6 +73,7 @@
     <Content Include="CSS\Employee.css" />
     <Content Include="CSS\Login.css" />
     <Content Include="CSS\Register.css" />
+    <Content Include="CSS\Sell.css" />
     <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
     <Content Include="Global.asax" />
@@ -148,6 +149,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Sell.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -198,6 +200,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.aspx.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell.aspx.designer.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

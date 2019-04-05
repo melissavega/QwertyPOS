@@ -4,11 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Home | Qwerty Kicks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-
+    <title>Home | Qwerty Kicks</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -35,7 +34,7 @@
             }
 
                 .sidenav a:hover {
-                    color: #f1f1f1;
+                    color: #808080;
                 }
 
         .main {
@@ -58,12 +57,16 @@
 <body>
     <form id="form1" runat="server">
         <div class="sidenav">
+            
+            <!--Employee Only Nav -->
             <a href="#Default">Home</a>
-            <a href="#Sell">Sell</a>
-            <a href="#SalesLedger">Sales Ledger</a>
-            <a href="#Reporting">Reporting</a>
+            <a href="#Sell">Make a Sale</a>
+            <a href="#Restock">Restock Inventory</a>          
+            
+            <!--Admin Only Nav --
             <a href="#Products">Products</a>
             <a href="#Customers">Customers</a>
+            <a href="#Reporting">Reporting</a>-->
         </div>
 
         <div class="main">
@@ -106,7 +109,7 @@
                 </div>
                 <div class="row">
                     <!-- Add a Product-->
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <img alt="Make a Sale" src="Images/payment-method.png" height="150" />
                         <p></p>
                         <h2>Make a Sale
@@ -118,30 +121,17 @@
                             Make a Sale
                         </button>
                     </div>
-                    <!-- Add a Product-->
-                    <div class="col-md-4">
-                        <img alt="Add a Product" src="Images/purchase.png" height="150" />
+                    <!-- Restock Products-->
+                    <div class="col-md-5">
+                        <img alt="Restock Products" src="Images/purchase.png" height="150" />
                         <p></p>
-                        <h2>Add a Product
+                        <h2>Restock Products
                         </h2>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
                         <button type="button" class="btn btn-dark">
-                            Add a Product
-                        </button>
-                    </div>
-                    <!-- Add a Customer-->
-                    <div class="col-md-4">
-                        <img alt="Add a Customer" src="Images/online-store.png" height="150" />
-                        <p></p>
-                        <h2>Add a Customer
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <button type="button" class="btn btn-dark">
-                            Add a Customer
+                            Restock Products
                         </button>
                     </div>
                 </div>
