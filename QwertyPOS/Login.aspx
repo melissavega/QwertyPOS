@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label>UserName(ID Number)</label>
                             <asp:TextBox ID="UserName" CssClass="form-control" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" CssClass="text-danger" runat="server" ErrorMessage="Username is required!" ControlToValidate="UserName"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" CssClass="text-danger" runat="server" ErrorMessage="Username is required!" ControlToValidate="UserName" ></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
@@ -33,7 +33,9 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" CssClass="text-danger" runat="server" ErrorMessage="Password is required!" ControlToValidate="Password"></asp:RequiredFieldValidator>
                         </div>
                         <asp:Button ID="btnLogin" runat="server" Class="btn btn-black" Text="Login" OnClick="btnLogin_Click" />
-                        <asp:Button ID="btnRegister" runat="server" Class="btn btn-black" Text="Register" PostBackUrl="~/Register.aspx" />
+                        <asp:Button ID="btnRegister" runat="server" Class="btn btn-black" Text="Register" PostBackUrl="~/Register.aspx" CausesValidation="false" />
+                        
+                       
 
                     </div>
 
