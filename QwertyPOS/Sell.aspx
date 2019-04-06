@@ -58,9 +58,9 @@
     <form id="form1" runat="server">
         <div class="sidenav">
             <!--Employee Only Nav -->
-            <a href="#Default">Home</a>
-            <a href="#Sell">Make a Sale</a>
-            <a href="#Restock">Restock Inventory</a>
+            <a href="Default.aspx">Home</a>
+            <a href="Sell.aspx">Make a Sale</a>
+            <a href="Restock.aspx">Restock Inventory</a>
 
             <!--Admin Only Nav --
             <a href="#Products">Products</a>
@@ -70,12 +70,44 @@
         <div class="main">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="container">
-                            <p></p>
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a class="navbar-brand"><span>
+                                <img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100" /></span> Qwerty Kicks</a>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="navbar-nav">
+                                </ul>
+                                <ul class="navbar-nav ml-md-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Signout <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Help </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider">
+                                            </div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="jumbotron">
                             <h2>Make a Sale</h2>
-                            <p>Choose your customers items below to add to the transaction and make a sale.</p>
-
+                            <p>
+                                Choose your customers items below to add to the transaction and make a sale.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="ASICS-tab" data-toggle="tab" href="#ASICS" role="tab" aria-controls="ASICS" aria-selected="true">ASICS</a>
@@ -544,11 +576,20 @@
                                         <th>Quantity Sum</th>
                                         <th>$XX.XX</th>
                                     </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th>
+                                            <input class="btn btn-dark" type="submit" value="Submit" /></th>
+                                    </tr>
                                 </tfoot>
                             </table>
+
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
