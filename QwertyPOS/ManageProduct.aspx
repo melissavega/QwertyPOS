@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QwertyPOS.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManageProduct.aspx.cs" Inherits="QwertyPOS.Default" %>
 
 <!DOCTYPE html>
 
@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form2" runat="server">
         <div class="sidenav">
             
             <!--Employee Only Nav -->
@@ -98,43 +98,45 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Hello, [Admin Name]!
+                            <h2>Product Management
                             </h2>
                             <p>
-                                Hello [Admin Name]! This is an admin-only page. Use this page to make changes to the store database as necessary. Remember to log out once you are finished!
-
+                                Hello [Admin Name]! This is an admin-only page. Use this page to manage products in the database.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <!-- Manage Brands-->
-                    <div class="col-md-5">
-                        <img alt="Manage Brands" src="Images/payment-method.png" height="150" />
-                        <p></p>
-                        <h2>Manage Brands
-                        </h2>
-                        <p>
-                            Manage brands/product categories.
-                        </p>
-                        <a class="btn btn-dark" href="ManageBrand.aspx" role="button">Add a Brand</a>
-                    </div>
-                    <!-- Add a Product-->
-                    <div class="col-md-5">
-                        <img alt="Manage Products" src="Images/purchase.png" height="150" />
-                        <p></p>
-                        <h2>Manage Products
-                        </h2>
-                        <p>
-                            Manage products/specific items.
-                        </p>
-                        <a class="btn btn-dark" href="ManageProduct.aspx" role="button">Add a Product</a>
-                    </div>
+            <!-- Add a Product -->
+            <label for="formGroupExampleInput" class="font-weight-bold">Add a Product</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="New Product Name">
+              </div>
+            <div class="form-group">
+                <label for="productImageFile">Product Image</label>
+                <input type="file" class="form-control-file" id="productImageFile">
+              </div>
+            <div class="form-group">
+                <label for="productDescription">Product Description</label>
+                <input type="text" class="form-control" id="productDescription" placeholder="New Product Description">
+              </div>
+            <input class="btn btn-dark" type="submit" value="Submit">
+            <!-- Rename a Product -->
+            <div class="form-group">
+            <label for="formGroupExampleInput2" class="font-weight-bold">Rename a Product</label>
+            <div class="col">
+                    <input type="text" class="form-control" placeholder="Current Product Name">
                 </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="New Product Name">
+                </div>
+            <input class="btn btn-dark" type="submit" value="Submit">
             </div>
-        </div>
-
-
+            <!-- Remove a Product -->
+            <div class="form-group">
+                <label for="formGroupExampleInput" class="font-weight-bold">Remove a Product</label>
+                <input type="text" class="form-control" id="removeProductForm" placeholder="Product to be Removed">
+                <input class="btn btn-dark" type="submit" value="Submit">
+            </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

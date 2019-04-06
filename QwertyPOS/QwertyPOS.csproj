@@ -136,6 +136,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="ManageBrand.aspx" />
+    <Content Include="ManageProduct.aspx" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -207,6 +209,20 @@
     </Compile>
     <Compile Include="Sell.aspx.designer.cs">
       <DependentUpon>Sell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBrand.aspx.cs">
+      <DependentUpon>ManageBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageBrand.aspx.designer.cs">
+      <DependentUpon>ManageBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
