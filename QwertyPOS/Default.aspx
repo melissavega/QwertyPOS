@@ -59,9 +59,9 @@
         <div class="sidenav">
             
             <!--Employee Only Nav -->
-            <a href="#Default">Home</a>
-            <a href="#Sell">Make a Sale</a>
-            <a href="#Restock">Restock Inventory</a>          
+            <a href="Default.aspx">Home</a>
+            <a href="Sell.aspx">Make a Sale</a>
+            <a href="Restock.aspx">Restock Inventory</a>       
             
             <!--Admin Only Nav --
             <a href="#Products">Products</a>
@@ -77,7 +77,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <a class="navbar-brand" <span><img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100"/></span> Qwerty Kicks</a>
+                            <a class="navbar-brand"> <span><img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100"/> Qwerty Kicks</span></a>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="navbar-nav">
                                 </ul>
@@ -88,11 +88,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-                                            <div class="dropdown-divider">
-                                            </div>
-                                            <a class="dropdown-item" href="#">Separated link</a>
-                                        </div>
+                                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
                                     </li>
                                 </ul>
                             </div>
@@ -108,7 +104,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- Add a Product-->
+                    <!-- Make a Sale-->
                     <div class="col-md-5">
                         <img alt="Make a Sale" src="Images/payment-method.png" height="150" />
                         <p></p>
@@ -117,22 +113,18 @@
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
-                        <button type="button" class="btn btn-dark">
-                            Make a Sale
-                        </button>
+                        <a class="btn btn-dark" href="Sell.aspx" role="button">Make a Sale</a>
                     </div>
-                    <!-- Restock Products-->
+                    <!-- Restock Inventory-->
                     <div class="col-md-5">
-                        <img alt="Restock Products" src="Images/purchase.png" height="150" />
+                        <img alt="Restock Inventory" src="Images/purchase.png" height="150" />
                         <p></p>
-                        <h2>Restock Products
+                        <h2>Restock Inventory
                         </h2>
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
-                        <button type="button" class="btn btn-dark">
-                            Restock Products
-                        </button>
+                        <a class="btn btn-dark" href="Restock.aspx" role="button">Restock Inventory</a>
                     </div>
                 </div>
             </div>
