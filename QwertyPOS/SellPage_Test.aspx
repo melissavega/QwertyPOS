@@ -42,7 +42,11 @@
             font-size: 18px; /* Increased text to enable scrolling */
             padding: 20px;
         }
-
+        .GridPosition{
+            position: center;
+            margin-left: 700px;
+            margin-top:-440px;
+        }
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -105,112 +109,62 @@
                     </div>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="container">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="Products" data-toggle="tab" href="#ASICS" role="tab" aria-controls="Product" aria-selected="true">Product</a>
-                                </li>
-                                
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <p></p>
-                                <asp:Repeater ID="rptrProducts" runat="server">
-                                    <ItemTemplate>
-                                <div class="tab-pane fade show active" id="ASICS" role="tabpanel" aria-labelledby="Products">
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <td><a href="http://www.google.com">
-                                                <img src="Images/qr-code.png" width="100" height="100" /></a>
-                                                <p></p>
-                                                <div class="proBrand">Brand: <%#Eval("Brand") %></div>
-                                                <div class="proModel">Model: <%#Eval("Model") %></div>
-                                                <div class="proSize">Size: <%#Eval("Size") %></div>
-                                                <div class="proGender">Gender: <%#Eval("GenderName") %></div>
-                                               <div class="proGender">Quantity: <%#Eval("Quantity") %></div>
-                                                <div class="proGender">Price:$<%#Eval("Price") %></div>
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                </div>
-
-                                    </ItemTemplate>
-                                    </asp:Repeater>
-
-                                </div>
-                            </div>
-                        </div>
-                    <div class="col-md-4">
-                        <div class="container">
-                            <p></p>
-                            <h2>Transaction Details</h2>
-                            <p>Here are your customer's transaction details:</p>
-                            <table class="table table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Quantity</th>
-                                        <th>Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Product Name</td>
-                                        <td>
-                                            <input size="2" />
-                                            <p></p>
-                                            <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-                                        <td>$XX.XX</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Product Name</td>
-                                        <td>
-                                            <input size="2" />
-                                            <p></p>
-                                            <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-                                        <td>$XX.XX</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Product Name</td>
-                                        <td>
-                                            <input size="2" />
-                                            <p></p>
-                                            <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-                                        <td>$XX.XX</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td>Subtotal</td>
-                                        <td></td>
-                                        <td>$XX.XX</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tax</td>
-                                        <td>6.25%</td>
-                                        <td>$XX.XX</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Total</th>
-                                        <th>Quantity Sum</th>
-                                        <th>$XX.XX</th>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>
-                                            <input class="btn btn-dark" type="submit" value="Submit" /></th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-
-                        </div>
-                    </div>
+            <div class="form-group">
+                <asp:Label ID="lblBrand" runat="server" CssClass="col-md-2 control-label" Text="Select Brand:"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlBrand" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlBrand_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
-        
+            <div class="form-group">
+                <asp:Label ID="lblModel" runat="server" CssClass="col-md-2 control-label" Text="Select Model:"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlModel" CssClass="form-control " runat="server"></asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="lblSize" runat="server" CssClass="col-md-2 control-label" Text="Select Size:"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlSize" CssClass="form-control " runat="server"></asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="lblGender" runat="server" CssClass="col-md-2 control-label" Text="Select Gender (1=M, 2=F):"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlGender" CssClass="form-control " runat="server"></asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="lblPrice" runat="server" CssClass="col-md-2 control-label" Text="Select Price:"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlPrice" CssClass="form-control " runat="server"></asp:DropDownList>
+                </div>
+            </div>
+
+            <asp:Button ID="btnAdd" runat="server" Class="btn btn-dark" Text="Add" OnClick="btnAdd_Click" />
+
+            <asp:Label ID="lblPrice2" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
+
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:BoundField DataField="Model" HeaderText="Model Name" />
+                    <asp:BoundField DataField="Price" HeaderText="Price" />
+                </Columns>
+                <EditRowStyle BackColor="#7C6F57" />
+                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#E3EAEB" />
+                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                <SortedDescendingHeaderStyle BackColor="#15524A" />
+            </asp:GridView>
+        </div>
+
+
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

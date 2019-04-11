@@ -87,8 +87,8 @@ namespace QwertyPOS
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     int quantity = int.Parse(ddlQuantity.Text);
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Product_Details(Product_ID,Gender_ID,Model,Size,Price) values('"+ddlBrand.SelectedItem.Value+"','"+ddlGnder.SelectedItem.Value+"','"+ddlModel.Text+"','"+(ddlSize.Text)+"','"+(ddlPrice.Text)+"')",con);
-                    SqlCommand cmd2 = new SqlCommand("INSERT INTO Inventory(Quantity,BrandID) values('" + quantity + "', '"+ddlBrand.SelectedItem.Value+"')", con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Product_Details(Product_ID,Gender_ID,Model,Size,Price,Quantity) values('"+ddlBrand.SelectedItem.Value+"','"+ddlGnder.SelectedItem.Value+"','"+ddlModel.Text+"','"+(ddlSize.Text)+"','"+(ddlPrice.Text)+"','"+quantity+"')",con);
+                    SqlCommand cmd2 = new SqlCommand("INSERT INTO Inventory(Quantity) values('" + quantity + "')", con);
                  
                     con.Open();
                     cmd.ExecuteNonQuery();
