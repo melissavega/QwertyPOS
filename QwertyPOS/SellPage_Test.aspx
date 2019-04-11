@@ -145,14 +145,15 @@
             <asp:Label ID="lblPrice2" runat="server" Text=""></asp:Label>
             <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" GridLines="None" OnDataBound="GridView1_DataBound" ShowFooter="True">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Model" HeaderText="Model Name" />
                     <asp:BoundField DataField="Price" HeaderText="Price" />
+                    <asp:ButtonField Text="Delete" />
                 </Columns>
                 <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <FooterStyle BackColor="Red" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
                 <RowStyle BackColor="#E3EAEB" />

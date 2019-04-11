@@ -15,19 +15,80 @@ namespace QwertyPOS
                 BindBrand();
                 BindModel();
                 BindGender();
-                BindSize();
-                MakeCart();
+                
             }
         }
 
-        private void MakeCart()
+        private void calculateSum()
         {
-           
+            Double total = 0;
+            foreach(GridViewRow row in GridView1.Rows)
+            {
+                total = total + Convert.ToDouble(row.Cells[1].Text);
+            }
+            GridView1.FooterRow.Cells[1].Text = "Total:$";
+            GridView1.FooterRow.Cells[2].Text = total.ToString();
         }
 
-        private void BindSize()
+        private DataTable GetDataTable()
         {
-            
+            DataTable dt = ViewState["SelectedModels"] as DataTable;
+
+            if (dt == null)
+            {
+                dt = new DataTable();
+                dt.TableName = "ColorData";
+                dt.Columns.Add(new DataColumn("Model", typeof(string)));
+                dt.Columns.Add(new DataColumn("Price", typeof(string)));
+                ViewState["SelectedModels"] = dt;
+            }
+            return dt;
+        }
+        private void SaveDataTable(DataTable dataTable)
+        {
+            ViewState["SelectedModels"] = dataTable;
+        }
+        private void AddItemToList(string modelName, string price)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                using (SqlCommand cmd =
+                    new SqlCommand("SELECT * FROM Product_Details WHERE Model = @modelName AND Price = @price", con))
+                {
+                    var modelParameter = new SqlParameter();
+                    modelParameter.ParameterName = "@modelName";
+                    modelParameter.Value = modelName;
+                    cmd.Parameters.Add(modelParameter);
+
+                    var priceParameter = new SqlParameter();
+                    priceParameter.ParameterName = "@price";
+                    priceParameter.Value = price;
+                    cmd.Parameters.Add(priceParameter);
+
+                    con.Open();
+
+                    using (var sqlReader = cmd.ExecuteReader())
+                    {
+                        var dataTable = GetDataTable();
+                        while (sqlReader.Read())
+                        {
+                            var dataRow = dataTable.NewRow();
+                            //Hear I assume that Product_Details table has Model and Price columns
+                            //So that sqlReader["Model"] and sqlReader["Price"] will not have any issue.
+                            dataRow["Model"] = sqlReader["Model"];
+                            dataRow["Price"] = sqlReader["Price"];
+                            dataTable.Rows.Add(dataRow);
+
+                            SaveDataTable(dataTable);
+                            GridView1.DataSource = dataTable;
+                            GridView1.DataBind();
+                            
+                        }
+                    }
+                }
+            }
         }
 
         private void BindGender()
@@ -159,19 +220,17 @@ namespace QwertyPOS
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(CS))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Product_Details WHERE Model = '" + ddlModel.SelectedItem.Text + "' AND Price = '" +ddlPrice.SelectedItem.Text + "'", con);
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-                
-                
-            }
+
+
+            AddItemToList(ddlModel.SelectedItem.Text, ddlPrice.SelectedItem.Text);
+
+
+            
+        }
+
+        protected void GridView1_DataBound(object sender, EventArgs e)
+        {
+            calculateSum();
         }
 
        
