@@ -15,6 +15,7 @@ namespace QwertyPOS
                 BindBrand();
                 BindModel();
                 BindGender();
+                BindQuantity();
                 
             }
         }
@@ -24,7 +25,7 @@ namespace QwertyPOS
             Double total = 0;
             foreach(GridViewRow row in GridView1.Rows)
             {
-                total = total + Convert.ToDouble(row.Cells[1].Text);
+                total = total + Convert.ToDouble(row.Cells[2].Text);
             }
             GridView1.FooterRow.Cells[1].Text = "Total:$";
             GridView1.FooterRow.Cells[2].Text = total.ToString();
@@ -39,6 +40,7 @@ namespace QwertyPOS
                 dt = new DataTable();
                 dt.TableName = "ColorData";
                 dt.Columns.Add(new DataColumn("Model", typeof(string)));
+                dt.Columns.Add(new DataColumn("Quantity", typeof(string)));
                 dt.Columns.Add(new DataColumn("Price", typeof(string)));
                 ViewState["SelectedModels"] = dt;
             }
@@ -48,19 +50,29 @@ namespace QwertyPOS
         {
             ViewState["SelectedModels"] = dataTable;
         }
-        private void AddItemToList(string modelName, string price)
+        protected void BindGrid()
+        {
+            GridView1.DataSource = ViewState["SelectedModels"] as DataTable;
+            GridView1.DataBind();
+        }
+        private void AddItemToList(string modelName, string Quantity, string price)
         {
             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(CS))
             {
                 using (SqlCommand cmd =
-                    new SqlCommand("SELECT * FROM Product_Details WHERE Model = @modelName AND Price = @price", con))
+                    new SqlCommand("SELECT * FROM Product_Details WHERE Model = @modelName AND Price = @price AND Quantity = @Quantity", con))
                 {
                     var modelParameter = new SqlParameter();
                     modelParameter.ParameterName = "@modelName";
                     modelParameter.Value = modelName;
                     cmd.Parameters.Add(modelParameter);
+
+                    var QuantityParameter = new SqlParameter();
+                    QuantityParameter.ParameterName = "@Quantity";
+                    QuantityParameter.Value = Quantity;
+                    cmd.Parameters.Add(QuantityParameter);
 
                     var priceParameter = new SqlParameter();
                     priceParameter.ParameterName = "@price";
@@ -78,6 +90,7 @@ namespace QwertyPOS
                             //Hear I assume that Product_Details table has Model and Price columns
                             //So that sqlReader["Model"] and sqlReader["Price"] will not have any issue.
                             dataRow["Model"] = sqlReader["Model"];
+                            dataRow["Quantity"] = sqlReader["Quantity"];
                             dataRow["Price"] = sqlReader["Price"];
                             dataTable.Rows.Add(dataRow);
 
@@ -90,7 +103,32 @@ namespace QwertyPOS
                 }
             }
         }
+        private void BindQuantity()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Product_Details", con);
 
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                sda.Fill(dt);
+
+                if (dt.Rows.Count != 0)
+                {
+                    ddlModel.DataSource = dt;
+                    ddlModel.DataTextField = "Quantity";
+                    ddlModel.DataValueField = "Product_ID";
+                    ddlModel.DataBind();
+                    ddlModel.Items.Insert(0, new ListItem("--Select--", "0"));
+                }
+
+
+            }
+        }
         private void BindGender()
         {
             
@@ -207,6 +245,12 @@ namespace QwertyPOS
                     ddlGender.DataBind();
                     ddlGender.Items.Insert(0, new ListItem("--Select--", "0"));
 
+                    ddlQuantity.DataSource = dt;
+                    ddlQuantity.DataTextField = "Quantity";
+                    ddlQuantity.DataValueField = "Product_ID";
+                    ddlQuantity.DataBind();
+                    ddlQuantity.Items.Insert(0, new ListItem("--Select--", "0"));
+
                     ddlPrice.DataSource = dt;
                     ddlPrice.DataTextField = "Price";
                     ddlPrice.DataValueField = "Product_ID";
@@ -220,12 +264,33 @@ namespace QwertyPOS
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-
-
-            AddItemToList(ddlModel.SelectedItem.Text, ddlPrice.SelectedItem.Text);
-
-
+            if(ddlBrand.SelectedItem !=null && ddlGender.SelectedItem !=null && ddlModel.SelectedItem !=null && ddlPrice.SelectedItem!=null && ddlQuantity.SelectedItem!=null && ddlSize.SelectedItem != null)
+            {
+                AddItemToList(ddlModel.SelectedItem.Text, ddlQuantity.SelectedItem.Text, ddlPrice.SelectedItem.Text);
+            }
+            else
+            {
+                
+            }
             
+            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Product_Details SET Quantity = Quantity-1 WHERE Product_ID ='"+ddlBrand.SelectedItem.Value+"'", con);
+                con.Open();
+               
+                cmd.ExecuteNonQuery();
+                
+
+            }
+
+            ddlBrand.ClearSelection();
+            ddlModel.ClearSelection();
+            ddlGender.ClearSelection();
+            ddlQuantity.ClearSelection();
+            ddlSize.ClearSelection();
+            ddlPrice.ClearSelection();
+
         }
 
         protected void GridView1_DataBound(object sender, EventArgs e)
@@ -233,6 +298,14 @@ namespace QwertyPOS
             calculateSum();
         }
 
-       
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            int index = Convert.ToInt32(e.RowIndex);
+            DataTable dt = ViewState["SelectedModels"] as DataTable;
+            dt.Rows[index].Delete();
+            ViewState["SelectedModels"] = dt;
+            BindGrid();
+        }
     }
 }

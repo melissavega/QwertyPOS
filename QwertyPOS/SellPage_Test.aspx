@@ -56,6 +56,7 @@
                     font-size: 16px;
                 }
         }
+
     </style>
 </head>
 <body>
@@ -134,25 +135,32 @@
                 </div>
             </div>
             <div class="form-group">
+                <asp:Label ID="lblQuantity" runat="server" CssClass="col-md-2 control-label" Text="Select Quanity In Stock:"></asp:Label>
+                <div class="col-md-3">
+                    <asp:DropDownList ID="ddlQuantity" CssClass="form-control " runat="server"></asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-group">
                 <asp:Label ID="lblPrice" runat="server" CssClass="col-md-2 control-label" Text="Select Price:"></asp:Label>
                 <div class="col-md-3">
                     <asp:DropDownList ID="ddlPrice" CssClass="form-control " runat="server"></asp:DropDownList>
                 </div>
             </div>
 
-            <asp:Button ID="btnAdd" runat="server" Class="btn btn-dark" Text="Add" OnClick="btnAdd_Click" />
+            <asp:Button ID="btnAdd" runat="server" Class="btn btn-dark" Text="Add" OnClick="btnAdd_Click"/>
 
-            <asp:Label ID="lblPrice2" runat="server" Text=""></asp:Label>
-            <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
+         
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" GridLines="None" OnDataBound="GridView1_DataBound" ShowFooter="True">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" OnDataBound="GridView1_DataBound" ShowFooter="True" OnRowDeleting="GridView1_RowDeleting">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Model" HeaderText="Model Name" />
+                    <asp:BoundField DataField="Quantity" HeaderText="Quantity In Stock" />
                     <asp:BoundField DataField="Price" HeaderText="Price" />
-                    <asp:ButtonField Text="Delete" />
+
+                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-dark" />
                 </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
+                <EditRowStyle BackColor="#7C6F57" HorizontalAlign="Center" />
                 <FooterStyle BackColor="Red" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
