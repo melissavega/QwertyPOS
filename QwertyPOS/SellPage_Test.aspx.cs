@@ -22,10 +22,14 @@ namespace QwertyPOS
 
         private void calculateSum()
         {
-            Double total = 0;
+            double total = 0;
+            double tax = 0.0625;
+            double convert;
             foreach(GridViewRow row in GridView1.Rows)
             {
-                total = total + Convert.ToDouble(row.Cells[2].Text);
+                convert = Convert.ToDouble(row.Cells[2].Text) * tax;
+                total = total + ((Convert.ToDouble(row.Cells[2].Text))+convert);
+               
             }
             GridView1.FooterRow.Cells[1].Text = "Total:$";
             GridView1.FooterRow.Cells[2].Text = total.ToString();
