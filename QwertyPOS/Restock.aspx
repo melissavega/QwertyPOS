@@ -130,12 +130,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <asp:Label ID="lblQuantity" runat="server" CssClass="col-md-2 control-label" Text="Select Quanity In Stock:"></asp:Label>
-                <div class="col-md-3">
-                    <asp:DropDownList ID="ddlQuantity" CssClass="form-control " runat="server"></asp:DropDownList>
-                </div>
-            </div>
-            <div class="form-group">
                 <asp:Label ID="lblPrice" runat="server" CssClass="col-md-2 control-label" Text="Select Price:"></asp:Label>
                 <div class="col-md-3">
                     <asp:DropDownList ID="ddlPrice" CssClass="form-control " runat="server"></asp:DropDownList>
@@ -144,7 +138,7 @@
             <div class="form-group">
                 <asp:Label ID="lblAddQuantity" runat="server" CssClass="col-md-2 control-label" Text="Enter Quantity to add:"></asp:Label>
                 <asp:TextBox ID="Quantityadded" CssClass="col-md-2 control-label" runat="server" Width="50px" MaxLength="2"></asp:TextBox>
-                &nbsp;
+                
                 <asp:Button ID="btnAdd" runat="server" Class="btn btn-dark" Text="Add Quantity" OnClick="btnAddQuantity_Click" Width="200px"/>
 
 

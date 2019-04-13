@@ -16,38 +16,13 @@ namespace QwertyPOS
                 BindBrand();
                 BindModel();
                 BindGender();
-                BindQuantity();
+                
 
             }
         }
 
 
-        private void BindQuantity()
-        {
-            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(CS))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Product_Details", con);
-
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-
-                sda.Fill(dt);
-
-                if (dt.Rows.Count != 0)
-                {
-                    ddlModel.DataSource = dt;
-                    ddlModel.DataTextField = "Quantity";
-                    ddlModel.DataValueField = "Product_ID";
-                    ddlModel.DataBind();
-                    ddlModel.Items.Insert(0, new ListItem("--Select--", "0"));
-                }
-
-
-            }
-        }
+       
         private void BindGender()
         {
 
@@ -164,12 +139,6 @@ namespace QwertyPOS
                     ddlGender.DataBind();
                     ddlGender.Items.Insert(0, new ListItem("--Select--", "0"));
 
-                    ddlQuantity.DataSource = dt;
-                    ddlQuantity.DataTextField = "Quantity";
-                    ddlQuantity.DataValueField = "Product_ID";
-                    ddlQuantity.DataBind();
-                    ddlQuantity.Items.Insert(0, new ListItem("--Select--", "0"));
-
                     ddlPrice.DataSource = dt;
                     ddlPrice.DataTextField = "Price";
                     ddlPrice.DataValueField = "Product_ID";
@@ -183,8 +152,9 @@ namespace QwertyPOS
 
         protected void btnAddQuantity_Click(object sender, EventArgs e)
         {
-
-            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+            if (ddlBrand.SelectedItem != null && ddlGender.SelectedItem != null && ddlModel.SelectedItem != null && ddlPrice.SelectedItem != null  && ddlSize.SelectedItem != null)
+            {
+             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
                 String c = "UPDATE Product_Details SET Quantity = '" + Quantityadded.Text + "' + Quantity WHERE Product_ID ='" 
@@ -199,9 +169,12 @@ namespace QwertyPOS
             ddlBrand.ClearSelection();
             ddlModel.ClearSelection();
             ddlGender.ClearSelection();
-            ddlQuantity.ClearSelection();
+           
             ddlSize.ClearSelection();
             ddlPrice.ClearSelection();
+
+            }
+               
 
         }
     }

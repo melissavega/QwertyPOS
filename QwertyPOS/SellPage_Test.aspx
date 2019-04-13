@@ -154,6 +154,7 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" OnDataBound="GridView1_DataBound" ShowFooter="True" OnRowDeleting="GridView1_RowDeleting" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
+                    <asp:BoundField DataField="Brand" HeaderText="Brand Number" />
                     <asp:BoundField DataField="Model" HeaderText="Model Name" />
                     <asp:BoundField DataField="Quantity" HeaderText="Quantity In Stock" />
                     <asp:BoundField DataField="Price" HeaderText="Price" />

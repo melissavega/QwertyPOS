@@ -27,12 +27,12 @@ namespace QwertyPOS
             double convert;
             foreach(GridViewRow row in GridView1.Rows)
             {
-                convert = Convert.ToDouble(row.Cells[2].Text) * tax;
-                total = total + ((Convert.ToDouble(row.Cells[2].Text))+convert);
+                convert = Convert.ToDouble(row.Cells[3].Text) * tax;
+                total = total + ((Convert.ToDouble(row.Cells[3].Text))+convert);
                
             }
-            GridView1.FooterRow.Cells[1].Text = "Total:$";
-            GridView1.FooterRow.Cells[2].Text = total.ToString();
+            GridView1.FooterRow.Cells[2].Text = "Total:$";
+            GridView1.FooterRow.Cells[3].Text = total.ToString();
         }
 
         private DataTable GetDataTable()
@@ -43,6 +43,7 @@ namespace QwertyPOS
             {
                 dt = new DataTable();
                 dt.TableName = "ColorData";
+                dt.Columns.Add(new DataColumn("Brand", typeof(string)));
                 dt.Columns.Add(new DataColumn("Model", typeof(string)));
                 dt.Columns.Add(new DataColumn("Quantity", typeof(string)));
                 dt.Columns.Add(new DataColumn("Price", typeof(string)));
@@ -59,15 +60,22 @@ namespace QwertyPOS
             GridView1.DataSource = ViewState["SelectedModels"] as DataTable;
             GridView1.DataBind();
         }
-        private void AddItemToList(string modelName, string Quantity, string price)
+        private void AddItemToList(string Brand,string modelName, string Quantity, string price)
         {
             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(CS))
             {
-                using (SqlCommand cmd =
-                    new SqlCommand("SELECT * FROM Product_Details WHERE Model = @modelName AND Price = @price AND Quantity = @Quantity", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Product_Details WHERE Model = @modelName AND Price = @price AND Quantity = @Quantity", con))
+                
                 {
+                using (SqlCommand cmd2 = new SqlCommand("SELECT * Product WHERE Product_ID= '"+ddlBrand.SelectedItem.Text+"'", con))
+                {
+                    var BrandParameter = new SqlParameter();
+                    BrandParameter.ParameterName = "Product_ID";
+                    BrandParameter.Value = Brand;
+                    cmd2.Parameters.Add(BrandParameter);
+
                     var modelParameter = new SqlParameter();
                     modelParameter.ParameterName = "@modelName";
                     modelParameter.Value = modelName;
@@ -93,6 +101,7 @@ namespace QwertyPOS
                             var dataRow = dataTable.NewRow();
                             //Hear I assume that Product_Details table has Model and Price columns
                             //So that sqlReader["Model"] and sqlReader["Price"] will not have any issue.
+                            dataRow["Brand"] = sqlReader["Product_ID"];
                             dataRow["Model"] = sqlReader["Model"];
                             dataRow["Quantity"] = sqlReader["Quantity"];
                             dataRow["Price"] = sqlReader["Price"];
@@ -104,6 +113,8 @@ namespace QwertyPOS
                             
                         }
                     }
+                }
+                    
                 }
             }
         }
@@ -270,7 +281,7 @@ namespace QwertyPOS
         {
             if(ddlBrand.SelectedItem !=null && ddlGender.SelectedItem !=null && ddlModel.SelectedItem !=null && ddlPrice.SelectedItem!=null && ddlQuantity.SelectedItem!=null && ddlSize.SelectedItem != null)
             {
-                AddItemToList(ddlModel.SelectedItem.Text, ddlQuantity.SelectedItem.Text, ddlPrice.SelectedItem.Text);
+                AddItemToList(ddlBrand.SelectedItem.Text, ddlModel.SelectedItem.Text, ddlQuantity.SelectedItem.Text, ddlPrice.SelectedItem.Text);
             }
             else
             {
