@@ -333,7 +333,7 @@ namespace QwertyPOS
             {
                 
                
-                SqlCommand cmd = new SqlCommand("INSERT INTO Transactions(Product_ID,Sold,Price) values('"+rw.Cells[0].Text+"','"+rw.Cells[1].Text+"','"+rw.Cells[3].Text+"')", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Transactions(Product_ID,Sold,Price) values('"+rw.Cells[0].Text+"','"+Convert.ToString(rw.Cells[1].Text)+"','"+rw.Cells[3].Text+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

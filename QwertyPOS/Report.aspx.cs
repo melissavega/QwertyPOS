@@ -22,7 +22,9 @@ namespace QwertyPOS
             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Transactions WHERE Date='"+Convert.ToDateTime( txtDate.Text)+"'", con);
+                if(txtDate.Text !=null && txtDate2.Text != null)
+                {
+                 SqlCommand cmd = new SqlCommand("SELECT * FROM Transactions WHERE Date Between'"+Convert.ToDateTime( txtDate.Text)+"' and '"+Convert.ToDateTime(txtDate2.Text)+"'", con);
 
                 con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -36,7 +38,15 @@ namespace QwertyPOS
                     GridView1.DataSource = dt;
                     GridView1.DataBind();
                 }
+                else
+                {
 
+                }
+
+
+                }
+               
+                con.Close();
 
             }
         }
