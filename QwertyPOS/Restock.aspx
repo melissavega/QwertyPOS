@@ -59,7 +59,7 @@
         <div class="sidenav">
             <!--Employee Only Nav -->
             <a href="Default.aspx">Home</a>
-            <a href="Sell.aspx">Make a Sale</a>
+            <a href="SellPage_Test.aspx">Make a Sale</a>
             <a href="Restock.aspx">Restock Inventory</a>
 
             <!--Admin Only Nav --
@@ -82,7 +82,7 @@
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#">Signout <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx">Signout <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Help </a>

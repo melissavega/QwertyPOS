@@ -57,9 +57,9 @@
         <div class="sidenav">
             
             <!--Employee Only Nav -->
-            <a href="#Default">Home</a>
-            <a href="#Sell">Make a Sale</a>
-            <a href="#Restock">Restock Inventory</a>          
+            <a href="Admin.aspx">Home</a>
+            <a href="AddProducts_Test.aspx">Add New Product</a>
+            <a href="Report.aspx">Manage Report</a>          
             
             <!--Admin Only Nav --
             <a href="#Products">Products</a>

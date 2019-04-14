@@ -13,5 +13,11 @@ namespace QwertyPOS
         {
 
         }
+
+        protected void btnSignout_Click(object sender, EventArgs e)
+        {
+            Session["USERNAME"] = null;
+            Response.Redirect("Login.aspx");
+        }
     }
 }

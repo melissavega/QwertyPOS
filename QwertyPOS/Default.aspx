@@ -60,7 +60,7 @@
             
             <!--Employee Only Nav -->
             <a href="Default.aspx">Home</a>
-            <a href="Sell.aspx">Make a Sale</a>
+            <a href="SellPage_Test.aspx">Make a Sale</a>
             <a href="Restock.aspx">Restock Inventory</a>       
             
             <!--Admin Only Nav --
@@ -83,7 +83,7 @@
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"> Signout <span class="sr-only">(current)</span></a>
+                                        <asp:Button ID="btnSignout" runat="server" Text="SignOut" OnClick="btnSignout_Click" CssClass="btn btn-light" />
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
@@ -113,7 +113,7 @@
                         <p>
                             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
-                        <a class="btn btn-dark" href="Sell.aspx" role="button">Make a Sale</a>
+                        <a class="btn btn-dark" href="SellPage_Test.aspx" role="button">Make a Sale</a>
                     </div>
                     <!-- Restock Inventory-->
                     <div class="col-md-5">

@@ -59,9 +59,9 @@
         <div class="sidenav">
             
             <!--Employee Only Nav -->
-            <a href="#Default">Home</a>
-            <a href="#Sell">Make a Sale</a>
-            <a href="#Restock">Restock Inventory</a>          
+            <a href="Admin.aspx">Home</a>
+            <a href="AddProducts_Test.aspx">Add New Products</a>
+            <a href="Report.aspx">Manage Report</a>          
             
             <!--Admin Only Nav --
             <a href="#Products">Products</a>
@@ -83,7 +83,7 @@
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"> Signout <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx"> Signout <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
@@ -117,18 +117,18 @@
                         <p>
                             Manage brands/product categories.
                         </p>
-                        <a class="btn btn-dark" href="ManageBrand.aspx" role="button">Add a Brand</a>
+                        <a class="btn btn-dark" href="AddProducts_Test.aspx" role="button">Add a Brand</a>
                     </div>
                     <!-- Add a Product-->
                     <div class="col-md-5">
                         <img alt="Manage Products" src="Images/purchase.png" height="150" />
                         <p></p>
-                        <h2>Manage Products
+                        <h2>Mange Report
                         </h2>
                         <p>
-                            Manage products/specific items.
+                            Manage transactions history.
                         </p>
-                        <a class="btn btn-dark" href="ManageProduct.aspx" role="button">Add a Product</a>
+                        <a class="btn btn-dark" href="Report.aspx" role="button">Report</a>
                     </div>
                 </div>
             </div>

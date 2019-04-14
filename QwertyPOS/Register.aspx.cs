@@ -25,7 +25,7 @@ namespace QwertyPOS
                     string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
                     using (SqlConnection con = new SqlConnection(CS))
                     {
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Users(ID_Number, FirstName, LastName, PhoneNumber, passsword) values('" + tbID.Text + "', '" + tbFirstName.Text + "', '" + tbLastName.Text + "', '" + tbPhoneNum.Text + "', '" + tbPassword.Text + "')", con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Users(ID_Number, FirstName, LastName, PhoneNumber, passsword) values('" + tbID.Text + "', '" + tbFirstName.Text + "', '" + tbLastName.Text + "', '" + tbPhoneNum.Text + "', '" + tbPassword.Text + "', 'U')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         lblMsg.Text = "Registeration Successfull";

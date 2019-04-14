@@ -29,13 +29,24 @@ namespace QwertyPOS
 
                 if (dt.Rows.Count != 0)
                 {
+                    string usertype = dt.Rows[0][6].ToString().Trim();
+                    if(usertype == "U")
+                    {
                     Session["USERNAME"] = UserName.Text;
-                    Response.Redirect("Employee.aspx");
+                    Response.Redirect("Default.aspx");
+                    } else if(usertype == "A")
+                    {
+                        Session["USERNAME"] = UserName.Text;
+                        Response.Redirect("Admin.aspx");
+                    }
+                    
                 }
                 else
                 {
                     lblError.Text = "Invalid Username or Passowrd";
                 }
+
+
             }
         }
     }

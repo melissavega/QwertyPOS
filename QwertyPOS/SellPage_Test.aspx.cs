@@ -25,6 +25,7 @@ namespace QwertyPOS
             double total = 0;
             double tax = 0.0625;
             double convert;
+            
             foreach(GridViewRow row in GridView1.Rows)
             {
                 convert = Convert.ToDouble(row.Cells[3].Text) * tax;
@@ -321,6 +322,29 @@ namespace QwertyPOS
             dt.Rows[index].Delete();
             ViewState["SelectedModels"] = dt;
             BindGrid();
+        }
+
+        protected void btnComplete_Click(object sender, EventArgs e)
+        {
+            foreach(GridViewRow rw in GridView1.Rows)
+            {
+            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                
+               
+                SqlCommand cmd = new SqlCommand("INSERT INTO Transactions(Product_ID,Sold,Price) values('"+rw.Cells[0].Text+"','"+rw.Cells[1].Text+"','"+rw.Cells[3].Text+"')", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                
+                    
+               
+               
+                
+            }
+            }
+           
         }
     }
 }
