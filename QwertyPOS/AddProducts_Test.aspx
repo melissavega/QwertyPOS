@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <title></title>
+    <title>Add Products</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -81,7 +81,7 @@
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#"> Signout <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx"> Signout <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>

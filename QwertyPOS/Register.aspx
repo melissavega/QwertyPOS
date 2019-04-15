@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="CSS/Register.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <title></title>
+    <title>Register</title>
 </head>
 <body>
     <form id="form1" runat="server">
