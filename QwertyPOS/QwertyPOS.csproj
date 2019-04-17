@@ -124,7 +124,7 @@
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />
-    <Content Include="Report.aspx" />
+    <Content Include="Report_Test2.aspx" />
     <Content Include="Restock.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -227,12 +227,12 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Report_Test2.aspx.cs">
+      <DependentUpon>Report_Test2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Report_Test2.aspx.designer.cs">
+      <DependentUpon>Report_Test2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Restock.aspx.cs">
       <DependentUpon>Restock.aspx</DependentUpon>

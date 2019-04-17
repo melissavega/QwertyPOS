@@ -58,15 +58,11 @@
     <form id="form1" runat="server">
         <div class="sidenav">
             
-            <!--Employee Only Nav -->
+            <!--Admin Nav -->
             <a href="Admin.aspx">Home</a>
             <a href="AddProducts_Test.aspx">Add New Products</a>
-            <a href="Report.aspx">Manage Report</a>          
+            <a href="Report.aspx">Manage Reports</a>          
             
-            <!--Admin Only Nav --
-            <a href="#Products">Products</a>
-            <a href="#Customers">Customers</a>
-            <a href="#Reporting">Reporting</a>-->
         </div>
 
         <div class="main">
@@ -98,10 +94,10 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Hello, [Admin Name]!
+                            <h2>Administrator View
                             </h2>
                             <p>
-                                Hello [Admin Name]! This is an admin-only page. Use this page to make changes to the store database as necessary. Remember to log out once you are finished!
+                                Hello! This is an admin-only page. Use this page to make changes to the store database as necessary. Remember to log out once you are finished!
 
                             </p>
                         </div>

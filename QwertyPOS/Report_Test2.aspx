@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QwertyPOS.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Report_Test2.aspx.cs" Inherits="QwertyPOS.Report" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <title>Home | Qwerty Kicks</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtDate").datepicker({
+
+                dateFormat: 'yy/mm/dd'
+            });
+
+            $("#txtDate2").datepicker({
+
+                dateFormat: 'yy/mm/dd'
+            });
+
+        });
+    </script>
+    <title>Reports| Qwerty Kicks</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -57,16 +75,12 @@
 <body>
     <form id="form1" runat="server">
         <div class="sidenav">
-            
-            <!--Employee Only Nav -->
-            <a href="Default.aspx">Home</a>
-            <a href="SellPage_Test.aspx">Make a Sale</a>
-            <a href="Restock.aspx">Restock Inventory</a>       
-            
-            <!--Admin Only Nav --
-            <a href="#Products">Products</a>
-            <a href="#Customers">Customers</a>
-            <a href="#Reporting">Reporting</a>-->
+
+            <!--Admin Nav -->
+            <a href="Admin.aspx">Home</a>
+            <a href="AddProducts_Test.aspx">Add New Products</a>
+            <a href="Report.aspx">Manage Reports</a>     
+
         </div>
 
         <div class="main">
@@ -77,16 +91,18 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <a class="navbar-brand"> <span><img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100"/> Qwerty Kicks</span></a>
+                            <a class="navbar-brand"><span>
+                                <img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100" />
+                                Qwerty Kicks</span></a>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="navbar-nav">
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="Login.aspx"> Signout <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx">Signout <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
+                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Help </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
                                     </li>
@@ -94,43 +110,40 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Employee View
+                            <h2>Administrator Reports
                             </h2>
                             <p>
                                 You look great today. I'm not surprised, Qwerty employees are the best around.
-                                Ready to sell some shoes? Select an item below to get started making your customer's day.
+                                Ready to sell some kicks? Select an item below to get started making your customer's day.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <!-- Make a Sale-->
-                    <div class="col-md-5">
-                        <img alt="Make a Sale" src="Images/payment-method.png" height="150" />
-                        <p></p>
-                        <h2>Make a Sale
-                        </h2>
-                        <p>
-                           Go here to start a transaction and make a sale
-                        </p>
-                        <a class="btn btn-dark" href="SellPage_Test.aspx" role="button">Make a Sale</a>
-                    </div>
-                    <!-- Restock Inventory-->
-                    <div class="col-md-5">
-                        <img alt="Restock Inventory" src="Images/purchase.png" height="150" />
-                        <p></p>
-                        <h2>Restock Inventory
-                        </h2>
-                        <p>
-                            Go here to restock inventory 
-                        </p>
-                        <a class="btn btn-dark" href="Restock.aspx" role="button">Restock Inventory</a>
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="main">
+            <div class="col-md-5">
+                <asp:Label ID="lblStart" runat="server">Start Date:</asp:Label>
+                <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
+                <asp:Label ID="lblEnd" runat="server">End Date:</asp:Label>
+                <asp:TextBox ID="txtDate2" runat="server"></asp:TextBox>
+                <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click" />
+                <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
 
-
+                </asp:GridView>
+            </div>
+        </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
