@@ -42,7 +42,7 @@
             font-size: 18px; /* Increased text to enable scrolling */
             padding: 20px;
         }
-
+       
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -93,8 +93,8 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Employee View
-                            </h2>
+                            <asp:label id="lblSuccess" runat="server" Font-Bold="true" Font-Size="XX-Large"></asp:label>
+                            
                             <p>
                                 You look great today. I'm not surprised, Qwerty employees are the best around.
                                 Ready to sell some shoes? Select an item below to get started making your customer's day.
