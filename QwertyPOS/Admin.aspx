@@ -132,10 +132,10 @@
                         <img alt="View Transaction History Reports" src="Images/packing.png" height="150" />
                         <p></p>
                         <h2>
-                            View Low Quantity Report
+                            View Low Quantity History Report
                         </h2>
                         <p>
-                            Run and view the Low Quantity Report.
+                            Run and view the Low Quantity History Report.
                         </p>
                         <a class="btn btn-dark" href="Report2.aspx" role="button">View Low Quantity</a>
                     </div>
