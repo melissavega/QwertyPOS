@@ -121,12 +121,7 @@
                     <asp:TextBox ID="ddlSize" CssClass="form-control " runat="server"></asp:TextBox>
                 </div>
             </div>
-            <div class="form-group">
-                <asp:Label ID="lblColor" runat="server" CssClass="col-md-2 control-label" Text="Enter Color:"></asp:Label>
-                <div class="col-md-3">
-                    <asp:DropDownList ID="ddlColors" CssClass="form-control " runat="server"></asp:DropDownList>
-                </div>
-            </div>
+           
                 <div class="form-group">
                 <asp:Label ID="lblGender" runat="server" CssClass="col-md-2 control-label" Text="Enter Gender:"></asp:Label>
                 <div class="col-md-3">

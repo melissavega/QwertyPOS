@@ -148,19 +148,29 @@
 
             <asp:Button ID="btnComplete" runat="server" Class="btn btn-dark" Text="Complete" OnClick="btnComplete_Click" OnClientClick="javascript:return confirm('Transaction Complete');"/>
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" OnDataBound="GridView1_DataBound" ShowFooter="True" OnRowDeleting="GridView1_RowDeleting" GridLines="None">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" OnDataBound="GridView1_DataBound" ShowFooter="True" OnRowDeleting="GridView1_RowDeleting" GridLines="None" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:BoundField DataField="Brand" HeaderText="Brand Number" />
-                    <asp:BoundField DataField="Model" HeaderText="Model Name" />
+                    <asp:BoundField DataField="Brand" HeaderText="Brand Number" >
+                    <HeaderStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Model" HeaderText="Model Name" >
                
-                    <asp:BoundField DataField="Price" HeaderText="Price" />
-                    <asp:BoundField DataField="Size" HeaderText="Size" />
+                    <FooterStyle HorizontalAlign="Center" />
+                    <HeaderStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+               
+                    <asp:BoundField DataField="Price" HeaderText="Price" >
+                    <HeaderStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Size" HeaderText="Size" >
+                    <HeaderStyle HorizontalAlign="Center" />
+                    </asp:BoundField>
                     <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-dark" DeleteText="Remove">
                         <ControlStyle CssClass="btn btn-dark"></ControlStyle>
                     </asp:CommandField>
                 </Columns>
-                <EditRowStyle BackColor="#7C6F57" HorizontalAlign="Center" />
+                <EditRowStyle BackColor="#7C6F57" HorizontalAlign="Center" BorderStyle="Solid" />
                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />

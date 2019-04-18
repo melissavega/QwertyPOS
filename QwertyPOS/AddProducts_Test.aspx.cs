@@ -18,37 +18,13 @@ namespace QwertyPOS
             {
                 BindBrand();
                 BindGender();
-                BindColor();
+             
             }
 
             
         }
 
-        private void BindColor()
-        {
-            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
-            using (SqlConnection con1 = new SqlConnection(CS))
-            {
-
-                SqlCommand cmd2 = new SqlCommand("SELECT * FROM Color", con1);
-                con1.Open();
-
-                SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
-
-                DataTable dt2 = new DataTable();
-
-                sda2.Fill(dt2);
-                if (dt2.Rows.Count != 0)
-                {
-                    ddlColors.DataSource = dt2;
-                    ddlColors.DataTextField = "PrimaryColor";
-
-                    ddlColors.DataValueField = "Color_ID";
-                    ddlColors.DataBind();
-                    ddlColors.Items.Insert(0, new ListItem("--Select--", "0"));
-                }
-            }
-        }
+       
 
         private void BindGender()
         {
@@ -107,14 +83,14 @@ namespace QwertyPOS
         
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (ddlModel.Text != "" && ddlColors.Text != "" && ddlQuantity.Text != "" && ddlSize.Text != "" && ddlPrice.Text != "" && ddlGnder.Text !="")
+            if (ddlModel.Text != "" && ddlQuantity.Text != "" && ddlSize.Text != "" && ddlPrice.Text != "" && ddlGnder.Text !="")
             {
 
                 string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     int quantity = int.Parse(ddlQuantity.Text);
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Product_Details(Product_ID,Gender_ID,Color_ID,Model,Size,Price,Quantity) values('"+ddlBrand.SelectedItem.Value+"','"+ddlGnder.SelectedItem.Value+"','"+ddlColors.SelectedValue+"','"+ddlModel.Text+"','"+(ddlSize.Text)+"','"+(ddlPrice.Text)+"','"+quantity+"')",con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Product_Details(Product_ID,Gender_ID,Model,Size,Price,Quantity) values('"+ddlBrand.SelectedItem.Value+"','"+ddlGnder.SelectedItem.Value+"','"+ddlModel.Text+"','"+(ddlSize.Text)+"','"+(ddlPrice.Text)+"','"+quantity+"')",con);
                     SqlCommand cmd2 = new SqlCommand("INSERT INTO Inventory(Quantity) values('" + quantity + "')", con);
                  
                     con.Open();

@@ -76,24 +76,6 @@ namespace QwertyPOS {
         protected global::System.Web.UI.WebControls.TextBox ddlSize;
         
         /// <summary>
-        /// lblColor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblColor;
-        
-        /// <summary>
-        /// ddlColors control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlColors;
-        
-        /// <summary>
         /// lblGender control.
         /// </summary>
         /// <remarks>

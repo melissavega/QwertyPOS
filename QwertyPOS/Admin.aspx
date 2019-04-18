@@ -95,8 +95,8 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Administrator View
-                            </h2>
+                             <asp:label id="lblSuccess" runat="server" Font-Bold="true" Font-Size="XX-Large"></asp:label>
+                            
                             <p>
                                 Hello! This is an admin-only page. Use this page to make changes to the store database as necessary. Remember to log out once you are finished!
 

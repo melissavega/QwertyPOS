@@ -244,7 +244,7 @@ namespace QwertyPOS
         private void calculateSum()
         {
             double total = 0;
-            double tax = 0.0625;
+            double tax = 0.0825;
             double convert;
             double round;
             foreach (GridViewRow row in GridView1.Rows)
