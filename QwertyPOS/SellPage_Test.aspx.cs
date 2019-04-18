@@ -224,6 +224,22 @@ namespace QwertyPOS
 
         protected void btnComplete_Click(object sender, EventArgs e)
         {
+            foreach (GridViewRow rw in GridView1.Rows)
+            {
+                string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(CS))
+                {
+
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Transactions(Product_ID,Sold,Price) values('" + rw.Cells[0].Text + "','" + Convert.ToString(rw.Cells[1].Text) + "','" + rw.Cells[2].Text + "')", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+            }
+
+
 
         }
         private void calculateSum()
@@ -257,10 +273,10 @@ namespace QwertyPOS
 
         private void BindGrid()
         {
-           
-                GridView1.DataSource = ViewState["SelectedModels"] as DataTable;
-                GridView1.DataBind();
-            
+
+            GridView1.DataSource = ViewState["SelectedModels"] as DataTable;
+            GridView1.DataBind();
+
         }
     }
 }
