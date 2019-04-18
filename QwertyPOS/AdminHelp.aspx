@@ -84,7 +84,7 @@
                                     </li>
                                     <!-- Admin Help button -->
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
+                                        <a class="nav-link dropdown-toggle" href="AdminHelp.aspx" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="AdminHelp.aspx">Help / FAQ</a> 
                                             <!--<a class="dropdown-item" href="#">Separated link</a> -->
@@ -95,7 +95,7 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Help / FAQ - Employee
+                            <h2>Help / FAQ - Administrator
                             </h2>
                             <p>
                                 Hello! If you need any help navigating the Qwerty Kicks employee website, you've come to the right place!
@@ -104,6 +104,7 @@
                         </div>
                     </div>
                 </div>
+                 </div>
                 <div class="row">
                   <div class="col-4">
                     <div class="list-group" id="list-tab" role="tablist">

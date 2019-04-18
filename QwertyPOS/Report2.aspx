@@ -23,22 +23,114 @@
             });
 
         });
-    </script>
+    </script>    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #292b2c;
+            overflow-x: hidden;
+            padding-top: 50px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #f1f1f1;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #808080;
+                }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 18px; /* Increased text to enable scrolling */
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 16px;
+                }
+        }
+    </style>
 </head>
 <body>
+        <div class="sidenav">
+
+        <!--Admin Nav -->
+        <a href="Admin.aspx">
+            <img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" />
+            Home</a>
+        <a href="AddProducts_Test.aspx">
+            <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
+            Add Products</a>
+        <a href="Report.aspx">
+            <img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" />
+            Transactions</a>
+        <a href="Report2.aspx">
+            <img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" />
+            Low Quantity</a>
+
+    </div>
+
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" <span>
+                            <img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100" /></span> Qwerty Kicks</a>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                            </ul>
+                            <ul class="navbar-nav ml-md-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Login.aspx">Sign out <span class="sr-only">(current)</span></a>
+                                </li>
+                                <!-- Admin Help button -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="AdminHelp.aspx" id="navbarDropdownMenuLink" data-toggle="dropdown">Help </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="AdminHelp.aspx">Help / FAQ</a>
+                                        <!--<a class="dropdown-item" href="#">Separated link</a> -->
+                                        <!-- Keeping the above seperated link in case it's useful later - Nick -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
     <div class="jumbotron">
-        <img alt="Qwerty Kicks Logo" src="Images/list.png" height="50" />
-        <h2>Manage Reports
+        <img alt="Qwerty Kicks Logo" src="Images/packing.png" height="50" />
+        <h2>Low Quantity Check
         </h2>
         <p>
-            Select report details below.
+            Run the Low Quantity report to view the models and styles of the shoes that have the low quantity flag.
         </p>
     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="main">
         <div class="col-md-5">
-            <img alt="Qwerty Kicks Logo" src="Images/barcode.png" height="50" />
-            <h2> Low Quantity Check
-            </h2>
             <p>
                 Select the dates for which you would like to run a Low Quantity history report below.
             </p>

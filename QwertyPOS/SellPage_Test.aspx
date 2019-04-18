@@ -87,7 +87,7 @@
                                     </li>
                                     <!-- Employee Help button -->
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
+                                        <a class="nav-link dropdown-toggle" href="EmployeeHelp.aspx" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="EmployeeHelp.aspx">Help / FAQ</a> 
                                             <!--<a class="dropdown-item" href="#">Separated link</a> -->
