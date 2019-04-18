@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <title>Reports | Qwerty Kicks</title>
+    <title>Transaction Report | Qwerty Kicks</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -123,7 +123,7 @@
                         <h2>Transaction History
                         </h2>
                         <p>
-                            Transaction history provides a report of all transactions that have taken place within a speficic date range.
+                            Transaction history provides a report of all transactions that have taken place within a specified date range.
                         </p>
                     </div>
                      </div>
