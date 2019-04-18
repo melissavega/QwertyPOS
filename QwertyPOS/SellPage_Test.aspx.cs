@@ -298,7 +298,6 @@ namespace QwertyPOS
 
                     ddlQuantity.DataSource = dt4;
                     ddlQuantity.DataTextField = "Quantity";
-
                     ddlQuantity.DataValueField = "Quantity";
                     ddlQuantity.DataBind();
                     ddlQuantity.Items.Insert(0, new ListItem("--Select--", "0"));

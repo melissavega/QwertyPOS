@@ -126,6 +126,16 @@
                         </p>
                         <a class="btn btn-dark" href="Report.aspx" role="button">View Reports</a>
                     </div>
+                    <div class="col-md-5">
+                        <img alt="View Reports" src="Images/list.png" height="150" />
+                        <p></p>
+                        <h2>View Low Quantity
+                        </h2>
+                        <p>
+                            View Low Quantity Report.
+                        </p>
+                        <a class="btn btn-dark" href="Report2.aspx" role="button">View Reports</a>
+                    </div>
                 </div>
             </div>
         </div>
