@@ -56,15 +56,11 @@
     <form id="form1" runat="server">
         <div class="sidenav">
             
-            <!--Employee Only Nav -->
-            <a href="Admin.aspx">Home</a>
-            <a href="AddProducts_Test.aspx">Add New Product</a>
-            <a href="Report.aspx">Manage Report</a>          
-            
-            <!--Admin Only Nav --
-            <a href="#Products">Products</a>
-            <a href="#Customers">Customers</a>
-            <a href="#Reporting">Reporting</a>-->
+            <!--Admin Nav -->
+            <a href="Admin.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" /> Home</a>
+            <a href="AddProducts_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" /> Add Products</a>
+            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/report-white.png" height="15" /> View Reports</a>  
+
         </div>
 
         <div class="main">
@@ -96,10 +92,11 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Brand Management
+                            <img alt="Qwerty Kicks Logo" src="Images/shopping-bag.png" height="50" />
+                            <h2>Brand and Product Management
                             </h2>
                             <p>
-                                Hello [Admin Name]! This is an admin-only page. Use this page to manage brands in the database.
+                                Hello! This is an admin-only page. Use this page to manage brands and products in your store.
                             </p>
                         </div>
                     </div>
