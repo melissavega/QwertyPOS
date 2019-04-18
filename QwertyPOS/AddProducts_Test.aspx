@@ -56,10 +56,10 @@
     <form id="form1" runat="server">
         <div class="sidenav">
             
-            <!--Admin Nav -->
             <a href="Admin.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" /> Home</a>
             <a href="AddProducts_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" /> Add Products</a>
-            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/report-white.png" height="15" /> View Reports</a>  
+            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Transactions</a>
+            <a href="Report2.aspx"><img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" /> Low Quantity</a>    
 
         </div>
 

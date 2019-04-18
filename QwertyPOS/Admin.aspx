@@ -61,7 +61,8 @@
             <!--Admin Nav -->
             <a href="Admin.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" /> Home</a>
             <a href="AddProducts_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" /> Add Products</a>
-            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/report-white.png" height="15" /> View Reports</a>          
+            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Transactions</a>
+            <a href="Report2.aspx"><img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" /> Low Quantity</a>           
             
         </div>
 
@@ -105,7 +106,7 @@
                 </div>
                 <div class="row">
                     <!-- Manage Brands-->
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <img alt="Add a Product" src="Images/shopping-bag.png" height="150" />
                         <p></p>
                         <h2>Add a Product
@@ -116,25 +117,27 @@
                         <a class="btn btn-dark" href="AddProducts_Test.aspx" role="button">Add a Product</a>
                     </div>
                     <!-- Add a Product-->
-                    <div class="col-md-5">
-                        <img alt="View Reports" src="Images/list.png" height="150" />
+                    <div class="col-md-4">
+                        <img alt="View Transaction History" src="Images/24-hours.png" height="150" />
                         <p></p>
-                        <h2>View Reports
+                        <h2>
+                            View Transaction History Report
                         </h2>
                         <p>
-                            Run and view reports like Transactions History.
+                            Run and view the Transactions History Report.
                         </p>
-                        <a class="btn btn-dark" href="Report.aspx" role="button">View Reports</a>
+                        <a class="btn btn-dark" href="Report.aspx" role="button">View Transaction History</a>
                     </div>
-                    <div class="col-md-5">
-                        <img alt="View Reports" src="Images/list.png" height="150" />
+                    <div class="col-md-4">
+                        <img alt="View Transaction History Reports" src="Images/packing.png" height="150" />
                         <p></p>
-                        <h2>View Low Quantity
+                        <h2>
+                            View Low Quantity Report
                         </h2>
                         <p>
-                            View Low Quantity Report.
+                            Run and view the Low Quantity Report.
                         </p>
-                        <a class="btn btn-dark" href="Report2.aspx" role="button">View Reports</a>
+                        <a class="btn btn-dark" href="Report2.aspx" role="button">View Low Quantity</a>
                     </div>
                 </div>
             </div>
