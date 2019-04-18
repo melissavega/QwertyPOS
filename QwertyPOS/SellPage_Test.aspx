@@ -63,14 +63,10 @@
     <form id="form1" runat="server">
         <div class="sidenav">
             <!--Employee Only Nav -->
-            <a href="Default.aspx">Home</a>
-            <a href="Sell.aspx">Make a Sale</a>
-            <a href="Restock.aspx">Restock Inventory</a>
+            <a href="Default.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" />  Home</a>
+            <a href="SellPage_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/make-sale-white.png" height="15" />  Make Sale</a>
+            <a href="Restock.aspx"><img alt="Qwerty Kicks Logo" src="Images/restock-white.png" height="15" />  Restock</a>
 
-            <!--Admin Only Nav --
-            <a href="#Products">Products</a>
-            <a href="#Customers">Customers</a>
-            <a href="#Reporting">Reporting</a>-->
         </div>
         <div class="main">
             <div class="container-fluid">
@@ -102,6 +98,7 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
+                            <img alt="Qwerty Kicks Logo" src="Images/payment-method.png" height="50" />
                             <h2>Make a Sale</h2>
                             <p>
                                 Choose your customers items below to add to the transaction and make a sale.

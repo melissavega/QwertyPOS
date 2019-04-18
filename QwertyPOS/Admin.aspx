@@ -59,9 +59,9 @@
         <div class="sidenav">
             
             <!--Admin Nav -->
-            <a href="Admin.aspx">Home</a>
-            <a href="AddProducts_Test.aspx">Add New Products</a>
-            <a href="Report.aspx">Manage Reports</a>          
+            <a href="Admin.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" /> Home</a>
+            <a href="AddProducts_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" /> Add Products</a>
+            <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/report-white.png" height="15" /> View Reports</a>          
             
         </div>
 
@@ -106,25 +106,25 @@
                 <div class="row">
                     <!-- Manage Brands-->
                     <div class="col-md-5">
-                        <img alt="Manage Brands" src="Images/payment-method.png" height="150" />
+                        <img alt="Add a Product" src="Images/shopping-bag.png" height="150" />
                         <p></p>
-                        <h2>Manage Brands
+                        <h2>Add a Product
                         </h2>
                         <p>
-                            Manage brands/product categories.
+                            Manage and add new brands and products to your store.
                         </p>
-                        <a class="btn btn-dark" href="AddProducts_Test.aspx" role="button">Add a Brand</a>
+                        <a class="btn btn-dark" href="AddProducts_Test.aspx" role="button">Add a Product</a>
                     </div>
                     <!-- Add a Product-->
                     <div class="col-md-5">
-                        <img alt="Manage Products" src="Images/purchase.png" height="150" />
+                        <img alt="View Reports" src="Images/list.png" height="150" />
                         <p></p>
-                        <h2>Mange Report
+                        <h2>View Reports
                         </h2>
                         <p>
-                            Manage transactions history.
+                            Run and view reports like Transactions History.
                         </p>
-                        <a class="btn btn-dark" href="Report.aspx" role="button">Report</a>
+                        <a class="btn btn-dark" href="Report.aspx" role="button">View Reports</a>
                     </div>
                 </div>
             </div>
