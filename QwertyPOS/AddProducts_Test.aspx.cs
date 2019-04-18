@@ -129,7 +129,9 @@ namespace QwertyPOS
                     ddlGnder.Items.FindByValue("0").Selected = true;
                 }
 
-
+                
+               
+               
             }
         }
     }

@@ -121,6 +121,7 @@ namespace QwertyPOS
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
+            
             AddItemToList(ddlBrand.SelectedItem.Value, ddlModel.SelectedItem.Text, ddlPrice.SelectedItem.Text, ddlSize.SelectedItem.Text);
 
             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
@@ -155,6 +156,7 @@ namespace QwertyPOS
                     modelParameter.Value = modelName;
                     cmd.Parameters.Add(modelParameter);
 
+                  
                     var priceParameter = new SqlParameter();
                     priceParameter.ParameterName = "@price";
                     priceParameter.Value = price;
@@ -176,6 +178,7 @@ namespace QwertyPOS
                             //So that sqlReader["Model"] and sqlReader["Price"] will not have any issue.
                             dataRow["Brand"] = sqlReader["Product_ID"];
                             dataRow["Model"] = sqlReader["Model"];
+                            
                             dataRow["Price"] = sqlReader["Price"];
                             dataRow["Size"] = sqlReader["Size"];
                             dataTable.Rows.Add(dataRow);
@@ -199,6 +202,7 @@ namespace QwertyPOS
                 dt.TableName = "ColorData";
                 dt.Columns.Add(new DataColumn("Brand", typeof(string)));
                 dt.Columns.Add(new DataColumn("Model", typeof(string)));
+                
                 dt.Columns.Add(new DataColumn("Price", typeof(string)));
                 dt.Columns.Add(new DataColumn("Size", typeof(string)));
                 ViewState["SelectedModels"] = dt;

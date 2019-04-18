@@ -153,6 +153,7 @@
                 <Columns>
                     <asp:BoundField DataField="Brand" HeaderText="Brand Number" />
                     <asp:BoundField DataField="Model" HeaderText="Model Name" />
+               
                     <asp:BoundField DataField="Price" HeaderText="Price" />
                     <asp:BoundField DataField="Size" HeaderText="Size" />
                     <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-dark" DeleteText="Remove">

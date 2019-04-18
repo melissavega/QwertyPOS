@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-dark" Text="Add Product" OnClick="Button1_Click" />
+                <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-dark" Text="Add Product" OnClick="Button1_Click" OnClientClick="javascript:return confirm('Product has been added');"/>
             </div>
             
             </div>
