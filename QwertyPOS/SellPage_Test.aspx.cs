@@ -227,8 +227,15 @@ namespace QwertyPOS
                 }
             }
 
-
-
+        
+            ddlBrand.ClearSelection();
+            ddlGender.ClearSelection();
+            ddlModel.ClearSelection();
+            ddlPrice.ClearSelection();
+            ddlSize.ClearSelection();
+            ddlQuantity.ClearSelection();
+            GridView1.DataSource = null;
+            GridView1.DataBind();
         }
         private void calculateSum()
         {

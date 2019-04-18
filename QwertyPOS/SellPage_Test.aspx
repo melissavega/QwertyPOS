@@ -146,7 +146,7 @@
 
             <asp:Button ID="btnAdd" runat="server" Class="btn btn-dark" Text="Add" OnClick="btnAdd_Click"/>
 
-            <asp:Button ID="btnComplete" runat="server" Class="btn btn-dark" Text="Complete" OnClick="btnComplete_Click"/>
+            <asp:Button ID="btnComplete" runat="server" Class="btn btn-dark" Text="Complete" OnClick="btnComplete_Click" OnClientClick="javascript:return confirm('Transaction Complete');"/>
 
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="GridPosition" CellPadding="4" ForeColor="#333333" OnDataBound="GridView1_DataBound" ShowFooter="True" OnRowDeleting="GridView1_RowDeleting" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />

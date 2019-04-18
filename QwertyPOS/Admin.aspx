@@ -125,7 +125,9 @@
                             Run and view reports like Transactions History.
                         </p>
                         <a class="btn btn-dark" href="Report.aspx" role="button">View Reports</a>
+
                     </div>
+
                     <div class="col-md-5">
                         <img alt="View Reports" src="Images/list.png" height="150" />
                         <p></p>
