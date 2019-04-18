@@ -246,11 +246,13 @@ namespace QwertyPOS
             double total = 0;
             double tax = 0.0625;
             double convert;
-
+            double round;
             foreach (GridViewRow row in GridView1.Rows)
             {
                 convert = Convert.ToDouble(row.Cells[2].Text) * tax;
-                total = total + ((Convert.ToDouble(row.Cells[2].Text)) + convert);
+                round = total + ((Convert.ToDouble(row.Cells[2].Text)) + convert);
+                total = Math.Round(round, 2, MidpointRounding.AwayFromZero);
+
 
             }
             GridView1.FooterRow.Cells[2].Text = "Total:$";
