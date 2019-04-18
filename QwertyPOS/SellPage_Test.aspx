@@ -113,13 +113,13 @@
             <div class="form-group">
                 <asp:Label ID="lblBrand" runat="server" CssClass="col-md-2 control-label" Text="Select Brand:"></asp:Label>
                 <div class="col-md-3">
-                    <asp:DropDownList ID="ddlBrand" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlBrand_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlBrand" CssClass="form-control " runat="server" ></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblModel" runat="server" CssClass="col-md-2 control-label" Text="Select Model:"></asp:Label>
                 <div class="col-md-3">
-                    <asp:DropDownList ID="ddlModel" CssClass="form-control " runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlModel" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlModel_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
@@ -156,9 +156,8 @@
                 <Columns>
                     <asp:BoundField DataField="Brand" HeaderText="Brand Number" />
                     <asp:BoundField DataField="Model" HeaderText="Model Name" />
-                    <asp:BoundField DataField="Quantity" HeaderText="Quantity In Stock" />
                     <asp:BoundField DataField="Price" HeaderText="Price" />
-
+                    <asp:BoundField DataField="Size" HeaderText="Size" />
                     <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-dark" DeleteText="Remove">
                         <ControlStyle CssClass="btn btn-dark"></ControlStyle>
                     </asp:CommandField>

@@ -124,7 +124,7 @@
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />
-    <Content Include="Report_Test2.aspx" />
+    <Content Include="Report.aspx" />
     <Content Include="Restock.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -168,6 +168,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Old Web Forms\Sell.aspx" />
+    <Content Include="SellingPage.aspx" />
     <Content Include="SellPage_Test.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -227,12 +228,12 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report_Test2.aspx.cs">
-      <DependentUpon>Report_Test2.aspx</DependentUpon>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report_Test2.aspx.designer.cs">
-      <DependentUpon>Report_Test2.aspx</DependentUpon>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Restock.aspx.cs">
       <DependentUpon>Restock.aspx</DependentUpon>
@@ -261,6 +262,13 @@
     </Compile>
     <Compile Include="Old Web Forms\ManageProduct.aspx.designer.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellingPage.aspx.cs">
+      <DependentUpon>SellingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellingPage.aspx.designer.cs">
+      <DependentUpon>SellingPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SellPage_Test.aspx.cs">
       <DependentUpon>SellPage_Test.aspx</DependentUpon>
