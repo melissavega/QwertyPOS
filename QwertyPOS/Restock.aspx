@@ -105,13 +105,13 @@
             <div class="form-group">
                 <asp:Label ID="lblBrand" runat="server" CssClass="col-md-2 control-label" Text="Select Brand:"></asp:Label>
                 <div class="col-md-3">
-                    <asp:DropDownList ID="ddlBrand" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlBrand_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlBrand" CssClass="form-control " runat="server"></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblModel" runat="server" CssClass="col-md-2 control-label" Text="Select Model:"></asp:Label>
                 <div class="col-md-3">
-                    <asp:DropDownList ID="ddlModel" CssClass="form-control " runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlModel" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlModel_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">

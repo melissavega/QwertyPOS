@@ -114,19 +114,7 @@ namespace QwertyPOS
                     ddlGender.DataBind();
                     ddlGender.Items.Insert(0, new ListItem("--Select--", "0"));
 
-                    ddlQuantity.DataSource = dt4;
-                    ddlQuantity.DataTextField = "Quantity";
-
-                    ddlQuantity.DataValueField = "Quantity";
-                    ddlQuantity.DataBind();
-                    ddlQuantity.Items.Insert(0, new ListItem("--Select--", "0"));
-
-                    ddlPrice.DataSource = dt5;
-                    ddlPrice.DataTextField = "Price";
-
-                    ddlPrice.DataValueField = "Price";
-                    ddlPrice.DataBind();
-                    ddlPrice.Items.Insert(0, new ListItem("--Select--", "0"));
+                  
                 }
             }
         }
@@ -277,6 +265,52 @@ namespace QwertyPOS
             GridView1.DataSource = ViewState["SelectedModels"] as DataTable;
             GridView1.DataBind();
 
+        }
+
+        protected void ddlSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
+            using (SqlConnection con1 = new SqlConnection(CS))
+            {
+
+                
+                SqlCommand cmd3 = new SqlCommand("SELECT * FROM Gender", con1);
+                SqlCommand cmd4 = new SqlCommand("SELECT distinct(Quantity) FROM Product_Details WHERE Size='" + ddlSize.SelectedItem.Value + "' AND Model='"+ddlModel.SelectedItem.Text+"'", con1);
+                SqlCommand cmd5 = new SqlCommand("SELECT distinct(Price) FROM Product_Details WHERE Model='" + ddlModel.SelectedItem.Text + "'", con1);
+                con1.Open();
+
+                
+                SqlDataAdapter sda3 = new SqlDataAdapter(cmd3);
+                SqlDataAdapter sda4 = new SqlDataAdapter(cmd4);
+                SqlDataAdapter sda5 = new SqlDataAdapter(cmd5);
+               
+                DataTable dt3 = new DataTable();
+                DataTable dt4 = new DataTable();
+                DataTable dt5 = new DataTable();
+               
+                sda3.Fill(dt3);
+                sda4.Fill(dt4);
+                sda5.Fill(dt5);
+                if (dt3.Rows.Count != 0)
+                {
+                    
+
+
+                    ddlQuantity.DataSource = dt4;
+                    ddlQuantity.DataTextField = "Quantity";
+
+                    ddlQuantity.DataValueField = "Quantity";
+                    ddlQuantity.DataBind();
+                    ddlQuantity.Items.Insert(0, new ListItem("--Select--", "0"));
+
+                    ddlPrice.DataSource = dt5;
+                    ddlPrice.DataTextField = "Price";
+
+                    ddlPrice.DataValueField = "Price";
+                    ddlPrice.DataBind();
+                    ddlPrice.Items.Insert(0, new ListItem("--Select--", "0"));
+                }
+            }
         }
     }
 }

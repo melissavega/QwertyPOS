@@ -122,7 +122,7 @@
             <div class="form-group">
                 <asp:Label ID="lblSize" runat="server" CssClass="col-md-2 control-label" Text="Select Size:"></asp:Label>
                 <div class="col-md-3">
-                    <asp:DropDownList ID="ddlSize" CssClass="form-control " runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlSize" CssClass="form-control " runat="server" OnSelectedIndexChanged="ddlSize_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
