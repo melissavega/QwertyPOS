@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QwertyPOS.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeHelp.aspx.cs" Inherits="QwertyPOS.EmployeeHelp" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <title>Home | Qwerty Kicks</title>
+    <title>Employee Help | Qwerty Kicks</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -72,13 +72,13 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <a class="navbar-brand"> <span><img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100"/> Qwerty Kicks</span></a>
+                            <a class="navbar-brand" <span><img alt="Qwerty Kicks Logo" src="Images/QwertyKicksYellow_LightBackground.png" height="100"/></span> Qwerty Kicks</a>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="navbar-nav">
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="Login.aspx"> Sign Out <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx"> Sign out <span class="sr-only">(current)</span></a>
                                     </li>
                                     <!-- Employee Help button -->
                                     <li class="nav-item dropdown">
@@ -93,38 +93,56 @@
                             </div>
                         </nav>
                         <div class="jumbotron">
-                            <h2>Employee View
+                            <h2>Help / FAQ - Employee
                             </h2>
                             <p>
-                                You look great today. I'm not surprised, Qwerty employees are the best around.
-                                Ready to sell some shoes? Select an item below to get started making your customer's day.
+                                Hello! If you need any help navigating the Qwerty Kicks employee website, you've come to the right place!
+                                Look below for all the information you'll need to be a superstar here at Qwerty Kicks!
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <!-- Make a Sale-->
-                    <div class="col-md-5">
-                        <img alt="Make a Sale" src="Images/payment-method.png" height="150" />
-                        <p></p>
-                        <h2>Make a Sale
-                        </h2>
-                        <p>
-                           Go here to start a transaction and make a sale
-                        </p>
-                        <a class="btn btn-dark" href="SellPage_Test.aspx" role="button">Make a Sale</a>
+                  <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                      <a class="list-group-item list-group-item-action active" id="list-nav-list" data-toggle="list" href="#list-nav" role="tab" aria-controls="nav">General Navigation</a>
+                      <a class="list-group-item list-group-item-action" id="list-sale-list" data-toggle="list" href="#list-sale" role="tab" aria-controls="sale">Making a Sale</a>
+                      <a class="list-group-item list-group-item-action" id="list-restock-list" data-toggle="list" href="#list-restock" role="tab" aria-controls="restock">Restocking Inventory</a>
+                      <a class="list-group-item list-group-item-action" id="list-adminmanager-list" data-toggle="list" href="#list-adminmanager" role="tab" aria-controls="adminmanager">When to Contact an Admin/Manager</a>
                     </div>
-                    <!-- Restock Inventory-->
-                    <div class="col-md-5">
-                        <img alt="Restock Inventory" src="Images/purchase.png" height="150" />
-                        <p></p>
-                        <h2>Restock Inventory
-                        </h2>
-                        <p>
-                            Go here to restock inventory 
-                        </p>
-                        <a class="btn btn-dark" href="Restock.aspx" role="button">Restock Inventory</a>
+                  </div>
+                  <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="list-nav" role="tabpanel" aria-labelledby="list-nav-list">
+                          <h1>General Navigation</h1>
+                          To navigate the site, simply look to the sidebar to your left!
+                          There, you will find all necessary links to perform to the best of your abilities here at Qwerty Kicks!
+                          If you get lost or need any more help, you can always return to this page from the "Help" button in the top right!
+                          Remember to click "Sign Out" in the top right when you're done with your shift!
+                      </div>
+                      <div class="tab-pane fade" id="list-sale" role="tabpanel" aria-labelledby="list-sale-list">
+                          <h1>Making a Sale</h1>
+                          Once you have arrived at the "Make a Sale" page, please fill out ALL forms on the page 
+                          (you will be unable to complete the sale if any boxes are left unfilled!).
+                          Remember to complete the individual text forms from the top-down, because the lower forms update based on the information in those above. 
+                          As you add items, you will see the total price of the current transaction appear on the right side of the screen.
+                          Once you have finished adding products to the cart, press the "Complete" button, and you have made a sale!
+                      </div>
+                      <div class="tab-pane fade" id="list-restock" role="tabpanel" aria-labelledby="list-profile-list">
+                          <h1>Restocking Inventory</h1>
+                          Once you have arrived at the "Restock Inventory" page, please fill out ALL forms on the page 
+                          (you will be unable to complete restocking if any boxes are left unfilled!).
+                           Remember to complete the individual text forms from the top-down, because the lower forms update based on the information in those above.
+                          Remember to verify that all information is correct, then simply press "Add Quantity" when you are ready to finish updating the inventory!
+                      </div>
+                      <div class="tab-pane fade" id="list-adminmanager" role="tabpanel" aria-labelledby="list-adminmanager-list">
+                          <h1>When to contact an Admin/Manager</h1>
+                          Sometimes, you will need to contact an administrator or manager to ensure Qwerty Kicks
+                          continues to function at its best. Common cases for this would include the generation of sales reports, as well as updating the database to include new products in the store. When faced with the need
+                          to do either of these, please contact the appropriate administrator or manager to handle them for you!
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>

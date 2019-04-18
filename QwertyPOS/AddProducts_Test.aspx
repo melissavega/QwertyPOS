@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <title>Add Products</title>
+    <title>Add Products | Qwerty Kicks</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -77,15 +77,15 @@
                                 </ul>
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="Login.aspx"> Signout <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="Login.aspx"> Sign Out <span class="sr-only">(current)</span></a>
                                     </li>
+                                    <!-- Admin Help button -->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"> Help </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-                                            <div class="dropdown-divider">
-                                            </div>
-                                            <a class="dropdown-item" href="#">Separated link</a>
+                                            <a class="dropdown-item" href="AdminHelp.aspx">Help / FAQ</a> 
+                                            <!--<a class="dropdown-item" href="#">Separated link</a> -->
+                                            <!-- Keeping the above seperated link in case it's useful later - Nick -->
                                         </div>
                                     </li>
                                 </ul>
