@@ -146,7 +146,7 @@
                                     <asp:Label ID="lblEnd" runat="server">End Date:</asp:Label>
                                     <asp:TextBox ID="txtDate2" runat="server"></asp:TextBox>
                                     <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click" />
-                                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" ShowFooter="True">
                                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                         <EditRowStyle BackColor="#999999" />
                                         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -162,6 +162,7 @@
                                     </asp:GridView>
                                 </div>
                             </form>
+                            <asp:Label ID="lblprice" runat="server"></asp:Label>
                         </div>
                     </div>
 </body>

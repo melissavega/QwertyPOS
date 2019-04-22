@@ -23,8 +23,8 @@ namespace QwertyPOS
             {
                 if (txtDate.Text != null && txtDate2.Text != null)
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM LowQuantityLog WHERE Dates Between'" + Convert.ToDateTime(txtDate.Text) + "' and '" + Convert.ToDateTime(txtDate2.Text) + "'", con);
-
+                    SqlCommand cmd = new SqlCommand("SELECT * From LowQuantityLog", con);
+                    
                     con.Open();
                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
 

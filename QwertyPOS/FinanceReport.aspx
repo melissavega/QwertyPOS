@@ -144,7 +144,7 @@
                     <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
                     <asp:Label ID="lblEnd" runat="server">End Date:</asp:Label>
                     <asp:TextBox ID="txtDate2" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click" />
+                    <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click"/>
                     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <EditRowStyle BackColor="#999999" />

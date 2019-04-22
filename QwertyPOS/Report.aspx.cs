@@ -37,7 +37,9 @@ namespace QwertyPOS
                 {
                     GridView1.DataSource = dt;
                     GridView1.DataBind();
-                }
+                        GridView1.FooterRow.Cells[2].Text = "Total Ammount: $";
+                        GridView1.FooterRow.Cells[3].Text = dt.Compute("Sum(Price)", "").ToString();
+                    }
                 else
                 {
 

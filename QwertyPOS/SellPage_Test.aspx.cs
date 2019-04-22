@@ -127,7 +127,7 @@ namespace QwertyPOS
             string CS = ConfigurationManager.ConnectionStrings["POS_SystemConnectionString2"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Product_Details SET Quantity = Quantity-1 WHERE Product_ID ='" + ddlBrand.SelectedItem.Value + "'", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Product_Details SET Quantity = Quantity-1 WHERE Product_ID ='" + ddlBrand.SelectedItem.Value + "' AND Model='"+ddlModel.SelectedItem.Text+"' AND Size='"+ddlSize.SelectedItem.Text+"' AND Quantity='"+ddlQuantity.SelectedItem.Text+"'", con);
                 con.Open();
 
                 cmd.ExecuteNonQuery();
