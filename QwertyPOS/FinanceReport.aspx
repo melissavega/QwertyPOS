@@ -122,7 +122,7 @@
         <h2>Financial Report
         </h2>
         <p>
-            Run financial report to get a summary of finances over the selected period.
+            Run financial report to get a summary of top 3 items that are being sold the most within a time period.
         </p>
     </div>
                     </div>
