@@ -79,6 +79,9 @@
         <a href="AddProducts_Test.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
             Add Products</a>
+        <a href="ProductReport.aspx">
+            <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
+            Product Report</a>
         <a href="Report.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" />
             Transactions</a>

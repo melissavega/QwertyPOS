@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Report2.aspx.cs" Inherits="QwertyPOS.Report2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductReport.aspx.cs" Inherits="QwertyPOS.ProductReport" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <title>Low Quantity Report | Qwerty Kicks</title>
+    <title>Product Report | Qwerty Kicks</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -79,9 +79,6 @@
         <a href="AddProducts_Test.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
             Add Products</a>
-        <a href="ProductReport.aspx">
-            <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
-            Product Report</a>
         <a href="Report.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" />
             Transactions</a>
@@ -123,10 +120,10 @@
                     </nav>
     <div class="jumbotron">
         <img alt="Qwerty Kicks Logo" src="Images/packing.png" height="50" />
-        <h2>Low Quantity Check
+        <h2>Product Report
         </h2>
         <p>
-            Run the Low Quantity report to view the models and styles of the shoes that have the low quantity flag.
+            Run product report to get a summary of currently-held inventory.
         </p>
     </div>
                     </div>
@@ -136,7 +133,7 @@
     <div class="main">
         <div class="col-md-5">
             <p>
-                Select the dates for which you would like to run a Low Quantity history report below.
+                Select the dates for which you would like to run a product report below.
             </p>
         </div>
     </div>
@@ -148,7 +145,7 @@
                     <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
                     <asp:Label ID="lblEnd" runat="server">End Date:</asp:Label>
                     <asp:TextBox ID="txtDate2" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click" />
+                    <asp:Button ID="btnApply" runat="server" Class="btn btn-dark" Text="Apply" OnClick="btnApply_Click"/>
                     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <EditRowStyle BackColor="#999999" />
