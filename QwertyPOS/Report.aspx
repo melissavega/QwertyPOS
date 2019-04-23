@@ -83,6 +83,7 @@
         <a href="Report.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" />
             Transactions</a>
+        <a href="FinanceReport.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Top 3 Items</a>
         <a href="Report2.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" />
             Low Quantity</a>

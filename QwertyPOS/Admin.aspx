@@ -62,6 +62,7 @@
             <a href="Admin.aspx"><img alt="Qwerty Kicks Logo" src="Images/home-white.png" height="15" /> Home</a>
             <a href="AddProducts_Test.aspx"><img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" /> Add Products</a>
             <a href="Report.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Transactions</a>
+            <a href="FinanceReport.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Top 3 Items</a>
             <a href="Report2.aspx"><img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" /> Low Quantity</a>           
             
         </div>
@@ -132,12 +133,12 @@
                         <img alt="View Transaction History Reports" src="Images/packing.png" height="150" />
                         <p></p>
                         <h2>
-                            View Low Quantity History Report
+                            View Top 3 Items 
                         </h2>
                         <p>
-                            Run and view the Low Quantity History Report.
+                            Run and view the Top 3 Items Report.
                         </p>
-                        <a class="btn btn-dark" href="Report2.aspx" role="button">View Low Quantity</a>
+                        <a class="btn btn-dark" href="FinanceReport.aspx" role="button"> Select Top 3 Items</a>
                     </div>
                 </div>
             </div>
