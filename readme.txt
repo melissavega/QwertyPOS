@@ -16,3 +16,5 @@ Admin Login:
 Employee Login:
   Username: 1475565
   Password: Database
+
+Note: When making a sale as an employee, ensure that the Brand and Model match up, e.g. 'Nike' and 'Nike Quantum 360'.
