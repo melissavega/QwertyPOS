@@ -67,13 +67,13 @@
         <a href="Report.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" />
             Transactions</a>
-        <a href="FinanceReport.aspx"><img alt="Qwerty Kicks Logo" src="Images/time-white.png" height="15" /> Top 3 Items</a>
+        <a href="FinanceReport.aspx"><img alt="Qwerty Kicks Logo" src="Images/iconmonstr-trophy-7-240.png" height="15" /> Top 3 Items</a>
             <a href="ProductReport.aspx">
-            <img alt="Qwerty Kicks Logo" src="Images/product-white.png" height="15" />
-            OUTOFSTOCK Check</a>
+            <img alt="Qwerty Kicks Logo" src="Images/iconmonstr-error-5-240.png" height="15" />
+            Out of Stock</a>
         <a href="Report2.aspx">
             <img alt="Qwerty Kicks Logo" src="Images/down-arrow-white.png" height="15" />
-            Low Quantity</a> 
+            Low Quantity</a>   
 
         </div>
 

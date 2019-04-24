@@ -89,6 +89,8 @@
     <Content Include="EmployeeHelp.aspx" />
     <Content Include="Images\down-arrow-white.png" />
     <Content Include="Images\home-white.png" />
+    <Content Include="Images\iconmonstr-error-5-240.png" />
+    <Content Include="Images\iconmonstr-trophy-7-240.png" />
     <Content Include="Images\make-sale-white.png" />
     <Content Include="Images\payment-method-white.png" />
     <Content Include="Images\product-white.png" />
