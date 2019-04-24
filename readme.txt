@@ -19,4 +19,6 @@ Employee Login:
 
 Note: When making a sale as an employee, ensure that the Brand and Model match up, e.g. 'Nike' and 'Nike Quantum 360'.
 
+NOTE: Our 2 Triggers are low quantity trigger and outofstock trigger. You will find other 2 trigger, please ignore those since professor did not accept that, we did not delete it because of short on time. 
+
 NOTE: In our project itself our triggers are OUTOFSTOCK check and low quantity, the name of the webforms (ASPX) crosponding to those are Report2.aspx for low quantity and ProdcutReport.aspx for OUTOFSTOCK. This way its easier to find the code. Ignore the naming of the webforms, we did not change it because it might create issues. 
