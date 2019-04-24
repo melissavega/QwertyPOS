@@ -124,7 +124,7 @@
                     </nav>
     <div class="jumbotron">
         <img alt="Qwerty Kicks Logo" src="Images/delivery.png" height="50" />
-        <h2>Out of Stock Report
+        <h2>Out of Stock Check
         </h2>
         <p>
             Check the products that are out of stock
